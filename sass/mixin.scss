@@ -1,0 +1,17 @@
+@import "variable";
+
+@mixin tnsn-first() {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+@mixin common-para() {
+    line-height: 28px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+@mixin heading(){
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family:$primary-font;
+}

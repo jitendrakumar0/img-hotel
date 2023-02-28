@@ -1,0 +1,288 @@
+@import "variable";
+@import "mixin";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+}
+
+@media (max-width: 1399.98px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+// body::-webkit-scrollbar {
+//   width: 0.8rem;
+//   background-color: $color-white;
+// }
+
+// body::-webkit-scrollbar-thumb {
+//   background: $color-gry
+// }
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input {
+  border: none !important;
+  width: 100%;
+}
+
+textarea {
+  border: none !important;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  @include tnsn-first();
+}
+
+// HEADER SECTION
+.header-top {
+  background-color: $color-white;
+
+}
+
+// header bottom
+#myHeader {
+  // position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+#myHeader.sticky {
+  z-index: 999;
+  @include tnsn-first();
+  background-color: $primary-color;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#myHeader {
+  background-color: $primary-color;
+
+  & .navbar-brand {
+    color: $color-white;
+    font-family: $third-font;
+  }
+
+  & .nav-item {
+    margin: 0 25px;
+
+    & .nav-drpdn {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        font-family: "FONTAWESOME";
+        top: 7px;
+        right: -6px;
+      }
+    }
+  }
+
+  & .nav-link {
+    color: $color-white;
+  }
+}
+
+// BOOKING SECTION
+#bkng-section {
+  & .owl-dots {
+    display: none;
+  }
+  & .owl-nav {
+    display: block !important;
+    & .owl-prev {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      visibility: hidden;
+      & span::before {
+        content: "";
+        position: absolute;
+        font-family: FONTAWESOME;
+        font-size: 40px;
+        top: 62px;
+        left: 30px;
+        visibility: visible;
+        padding: 0px 24px;
+        border-radius: 52px;
+        visibility: visible;
+        color: $color-white;
+      }
+    }
+
+    & .owl-next {
+      position: absolute;
+      top: 20%;
+      right: 0;
+      visibility: hidden;
+
+      & span::before {
+        content: "\f105";
+        position: absolute;
+        font-family: FONTAWESOME;
+        font-size: 40px;
+        top: 62px;
+        right: 30px;
+        visibility: visible;
+        padding: 0px 24px;
+        border-radius: 52px;
+        visibility: visible;
+        color: $color-white;
+      }
+    }
+  }
+    & .item{
+      & img{
+        position: relative;
+      }
+      & .content{
+        position:absolute;
+        bottom: 20%;
+        left: 20%;
+        & .heading-cntnt{
+          color:$color-fourth;
+          font-size:$font-big;
+          font-family: Satisfy;
+          font-weight:$font-bold;
+          letter-spacing: 5px;
+        }
+        & .para-cntnt{
+          color:$color-fourth;
+          font-size:$font-big;
+          font-weight:$font-bold;
+          text-align: end;
+          letter-spacing: 5px;
+        }
+      }
+  }
+}
+// OFFER SECTION
+#ofr-sctn{
+  & .image{
+    position: relative;
+    & img{
+      border-radius: 10px;
+      position:relative;
+    }
+    & .ofr-text{
+      position:absolute;
+      top:0;
+      left: 0;
+    }
+  }
+}
+
+
+
+.form-container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.form-container form {
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.form-container form.open .calendar-popup {
+  opacity: 1;
+}
+
+.form-container form i {
+  padding: 0 10px 0 15px;
+}
+
+.form-container form input {
+  background-color: transparent !important;
+  border: none;
+  border-left: 1px solid #eee;
+  padding: 15px 25px;
+}
+
+.form-container .calendar-popup {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  top: calc(100% + 5px);
+  transition: all 0.1s linear;
+  width: 100%;
+}
+
+.form-container .calendar-popup .month-and-year {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-container .calendar-popup .month-and-year h4 {
+  width: 100%;
+}
+
+.form-container .calendar-popup .button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  position: absolute;
+  top: 15px;
+}
+
+.form-container .calendar-popup .button:hover {
+  cursor: pointer;
+}
+
+.form-container .calendar-popup .button.prev {
+  left: 10px;
+}
+
+.form-container .calendar-popup .button.next {
+  right: 10px;
+}
+
+.form-container .calendar-popup table {
+  font-size: 12px;
+  width: 100%;
+}
+
+.form-container .calendar-popup table tr {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 5px 0;
+}
+
+.form-container .calendar-popup table tr th,
+.form-container .calendar-popup table tr td {
+  text-align: center;
+}
+
+.form-container .calendar-popup table .day:hover {
+  cursor: pointer;
+}
