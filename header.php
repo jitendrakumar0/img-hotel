@@ -9,9 +9,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=yes" />
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="images/favicon1.png">
-    <link
-        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
-        rel="stylesheet" type="text/css" />
+    <link rel='stylesheet' href='css/css/bootstrap.datepicker.min.css'>
     <link
         href="https://fonts.googleapis.com/css2?family=Alkalami&family=Averia+Serif+Libre&family=Bree+Serif&family=Josefin+Sans:wght@500&family=Lexend+Deca:wght@300&family=Merriweather:wght@700&family=Nunito+Sans:wght@600&family=Poppins:wght@500&family=Quicksand:wght@500&family=Raleway:wght@500&family=Rubik+Distressed&family=Rubik+Mono+One&family=Rubik:wght@500&family=Sacramento&family=Satisfy&family=Signika:wght@600&display=swap"
         rel="stylesheet">
@@ -28,25 +26,85 @@
 
     <!-- HEADER SECTION -->
 
-    <!-- <div class="container-fluid header-top">
+    <div class="container-fluid header-top">
         <div class="container">
             <div class="row">
-                <div class="col-2 bkn-date">
-                    <div class="form-container">
-                        <form>
-                            <i class="far fa-calendar-alt"></i>
-                            <input type="text" placeholder="Pick a date" class="date-input">
+                <div class="col-2 chekin-date">
+                    <div class="form-container w-100 h-100">
+                        <form class="row form position-relative h-100">
+                            <div class="w-100">
+                                <div class="input-group date" id="datepicker">
+                                    <input type="text" class="form-control" id="date" placeholder="check-in">
+                                    <span class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-2"></div>
-                <div class="col-2"></div>
-                <div class="col-2"></div>
-                <div class="col-2"></div>
-                <div class="col-2"></div>
+                <div class="col-2 checkout-date">
+                    <div class="form-container w-100 h-100">
+                        <form class="row form position-relative h-100">
+                            <div class="w-100">
+                                <div class="input-group date" id="datepicker-2">
+                                    <input type="text" class="form-control" id="date" placeholder="check-out">
+                                    <span class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-2 guest-amnt">
+                    <div class="guest">
+                        <select class="form-select mb-1" aria-label=".form-select-lg example">
+                            <option selected>Guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="3">4</option>
+                            <option value="3">5</option>
+                            <option value="3">6</option>
+                        </select>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-2 guest-amnt">
+                    <div class="guest">
+                        <select class="form-select mb-1" aria-label=".form-select-lg example">
+                        <option selected>Rooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="3">4</option>
+                            <option value="3">5</option>
+                            <option value="3">6</option>
+                        </select>
+                        <i class="fa fa-bed" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-2 srch-lnk">
+                    <div class="lnk w-100 h-100 text-center">
+                        <a href="#">Search</a>
+                    </div>
+                </div>
+                <div class="col-2 lgn-snp-lnk">
+                    <div class="lnk w-100 h-100 text-center">
+                        <a href="#">
+                            <img src="images/login-img.png" alt="" class="img-fluid">
+                            Login/Signup
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <div class="container-fluid header-section pt-1 pb-1" id="myHeader">

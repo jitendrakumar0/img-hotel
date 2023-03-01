@@ -14,7 +14,7 @@ function myFunction() {
         header.classList.remove("sticky");
     }
 }
-// OWL-CAROUSEL LATEST 
+// OWL-CAROUSEL HOME
 $(document).ready(function () {
     $('.owl-carousel-home').owlCarousel({
         items: 1,
@@ -42,16 +42,16 @@ $(document).ready(function () {
         }
     });
 })
-// OWL-CAROUSEL EXPERT
+// OWL-CAROUSEL PP
 $(document).ready(function () {
-    $('.owl-carousel-experts').owlCarousel({
-        items: 4,
+    $('.owl-carousel-pp').owlCarousel({
+        items:2,
         loop: true,
         autoplay: true,
         margin: 20,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
                 nav: true
             },
             500: {
@@ -59,12 +59,12 @@ $(document).ready(function () {
                 nav: false
             },
             800: {
-                items: 3,
+                items: 2,
                 nav: true,
                 loop: true
             },
             1000: {
-                items: 4,
+                items:2,
                 nav: true,
                 loop: true
             }
@@ -96,4 +96,11 @@ $(document).ready(function () {
         }
     });
 })
+// CHECK IN CHECK OUT
+$(function(){
+    $('#datepicker').datepicker();
+  });
+$(function(){
+    $('#datepicker-2').datepicker();
+  });
 

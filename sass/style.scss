@@ -57,8 +57,106 @@ a {
 // HEADER SECTION
 .header-top {
   background-color: $color-white;
-
+  border-top:2px solid $primary-color;
+  & .form-container{
+    & .form{
+      border-right:2px solid $primary-color;
+      & input::placeholder{
+        color:$primary-color;
+       
+      }
+      & .input-group-append{
+        & .input-group-text{
+          background-color:$color-white !important;
+          border: none !important;
+          & i{
+            color:$primary-color;
+          }
+        }
+      }
+    }
+  }
+  & .guest-amnt{
+    border-right:2px solid $primary-color;
+    & .guest{
+      position:relative;
+      & select{
+        border:none;
+        background-image:none;
+        position:relative;
+        color:$primary-color;
+        & option{
+            & :hover{
+              background-color:$color-fourth !important;
+            }
+        }
+      }
+      & i{
+        position: absolute;
+        right:20px;
+        top: 10px;
+        color:$primary-color;
+      }
+    }
+  }
+  & .srch-lnk{
+    border-right:2px solid $primary-color;
+    padding: 0;
+    & .lnk{
+      & a{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color:$primary-color;
+        background-color:$color-fourth;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  & .lgn-snp-lnk{
+    & .lnk{
+      & a{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        color:$primary-color;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        & img{
+          max-width:25px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
+
+
+
+.datepicker-dropdown{
+  top:49px !important;
+  background-color:$color-white;
+}
+.datepicker-days{
+  min-width:200px !important;
+  top:45px !important;
+  left:60px !important;
+  padding:0 20px !important;
+}
+.datepicker .datepicker-switch,.datepicker td,.datepicker th{
+  color:$primary-color !important;
+  font-weight: lighter !important;
+}
+.datepicker table tr td.new, .datepicker table tr td.old{
+  color:$secondary-color-trsp !important;
+}
+.datepicker td, .datepicker th{
+  min-width:35px !important;
+}
+// .datepicker-dropdown:after{
+//   border-bottom:6px solid $color-dark;
 
 // header bottom
 #myHeader {
@@ -84,7 +182,7 @@ a {
   }
 
   & .nav-item {
-    margin: 0 25px;
+    margin: 0 20px;
 
     & .nav-drpdn {
       position: relative;
@@ -106,6 +204,7 @@ a {
 
 // BOOKING SECTION
 #bkng-section {
+  position:relative;
   & .owl-dots {
     display: none;
   }
@@ -153,13 +252,25 @@ a {
     }
   }
     & .item{
+      position: relative;
+      &::before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0000005d;
+        z-index: 2;
+      }
       & img{
         position: relative;
       }
       & .content{
         position:absolute;
-        bottom: 20%;
-        left: 20%;
+        bottom:25%;
+        left:30%;
+        z-index: 4;
         & .heading-cntnt{
           color:$color-fourth;
           font-size:$font-big;
@@ -179,110 +290,155 @@ a {
 }
 // OFFER SECTION
 #ofr-sctn{
+  & .ofr-contner{
+    background-color:$primary-color;
+    padding: 15px 10px;
+    border-radius: 5px;
   & .image{
     position: relative;
     & img{
       border-radius: 10px;
       position:relative;
     }
+    & img::after{
+      content:"";
+      position: absolute;
+      top: 0;
+      left:0;
+      width:500px;
+      height:500px;
+      background-color:$secondary-color-trsp;
+    }
     & .ofr-text{
-      position:absolute;
-      top:0;
-      left: 0;
+      position: absolute;
+      top:20px;
+      left:0;
+      background:$secondary-color-trsp;
+      color:$color-white;
+      padding: 0 8px;
+    }
+  }
+  & .txt-bx{
+    border-radius: 5px;
+    & .txt{
+      & .txt-prcnt{
+        & span{
+          font-size:$font-med;
+          font-weight:$font-bold;
+          color:$color-fourth;
+          font-family:$fourth-font;
+        }
+      }
+      & .on-al{
+        & span{
+          font-size:$font-med;
+          letter-spacing: 5px;
+          font-family:$fourth-font;
+          color:$color-fourth;
+          font-weight:$font-bold
+        }
+      }
+      & .bk-nw{
+        & a{
+          color:$primary-color;
+          background:$color-fourth;
+          padding: 15px 45px;
+        }
+      }
+    }
+  }
+  & .qr-cntnr{
+    & img{
+      max-width:200px;
+      border-radius: 10px;
     }
   }
 }
-
-
-
-.form-container {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
 }
 
-.form-container form {
-  background-color: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  position: relative;
-}
+// POPULAR HOTELS SECTION
 
-.form-container form.open .calendar-popup {
-  opacity: 1;
-}
-
-.form-container form i {
-  padding: 0 10px 0 15px;
-}
-
-.form-container form input {
-  background-color: transparent !important;
-  border: none;
-  border-left: 1px solid #eee;
-  padding: 15px 25px;
-}
-
-.form-container .calendar-popup {
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  opacity: 0;
-  padding: 10px;
-  position: absolute;
-  top: calc(100% + 5px);
-  transition: all 0.1s linear;
-  width: 100%;
-}
-
-.form-container .calendar-popup .month-and-year {
-  align-items: center;
-  display: flex;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.form-container .calendar-popup .month-and-year h4 {
-  width: 100%;
-}
-
-.form-container .calendar-popup .button {
-  background-color: transparent;
-  border: none;
-  font-weight: bold;
-  outline: none;
-  position: absolute;
-  top: 15px;
-}
-
-.form-container .calendar-popup .button:hover {
-  cursor: pointer;
-}
-
-.form-container .calendar-popup .button.prev {
-  left: 10px;
-}
-
-.form-container .calendar-popup .button.next {
-  right: 10px;
-}
-
-.form-container .calendar-popup table {
-  font-size: 12px;
-  width: 100%;
-}
-
-.form-container .calendar-popup table tr {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  padding: 5px 0;
-}
-
-.form-container .calendar-popup table tr th,
-.form-container .calendar-popup table tr td {
-  text-align: center;
-}
-
-.form-container .calendar-popup table .day:hover {
-  cursor: pointer;
+#pp-hotels{
+  background:url("../../images/hotels-bg.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+  position:relative;
+  padding: 35px 0 0 0;
+  &::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: $primary-color-trsp;
+  }
+  & .content{
+    padding: 30px 0 0 0;
+    & .heading{
+      color:$color-fourth;
+    font-size:$font-sm;
+    font-weight:$font-bold;
+    }
+    & .para{
+      color:$color-fourth;
+      font-size:$font-primary;
+    }
+    & a{
+      color:$primary-color;
+      background:$color-fourth;
+      font-size:$font-primary;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  }
+  & .carousel-pp{
+    & .owl-dots {
+      display: none;
+    }
+    & .owl-nav {
+      display: block !important;
+      & .owl-prev {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        visibility: hidden;
+        & span::before {
+          content: "";
+          position: absolute;
+          font-family: FONTAWESOME;
+          font-size: 40px;
+          top: 32px;
+          left: -10px;
+          visibility: visible;
+          padding: 0px 24px;
+          border-radius: 52px;
+          visibility: visible;
+          color: $color-white;
+        }
+      }
+  
+      & .owl-next {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        visibility: hidden;
+  
+        & span::before {
+          content: "\f105";
+          position: absolute;
+          font-family: FONTAWESOME;
+          font-size: 40px;
+          top: 32px;
+          right: -10px;
+          visibility: visible;
+          padding: 0px 24px;
+          border-radius: 52px;
+          visibility: visible;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }
