@@ -9,7 +9,7 @@ body {
 
 @media (max-width: 1399.98px) {
   .container {
-    max-width: 1250px;
+    max-width: 1290px;
   }
 }
 
@@ -53,17 +53,59 @@ a {
   text-decoration: none;
   @include tnsn-first();
 }
+// COMMON BUTTON
+.cmn-btn{
+  position:relative;
+  overflow:hidden;
+  @include tnsn-first();
+  &:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:-210px;
+    background-color:$color-btn;
+    @include tnsn-first();
+  }
+  &:after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    right:-210px;
+    background-color:$color-btn;
+    @include tnsn-first();
+    z-index:1;
+  }
+  & span{
+    position:relative;
+    z-index: 2;
+  }
+  &:hover::before{
+    left:0;
+  }
+  &:hover::after{
+    right:0;
+  }
+}
 
 // HEADER SECTION
 .header-top {
   background-color: $color-white;
   border-top:2px solid $primary-color;
+  position:relative;
+  z-index:999;
   & .form-container{
     & .form{
       border-right:2px solid $primary-color;
-      & input::placeholder{
+      & input{
         color:$primary-color;
-       
+        font-size:$font-primary;
+        &::placeholder{
+          color:$primary-color;
+        }
       }
       & .input-group-append{
         & .input-group-text{
@@ -85,6 +127,7 @@ a {
         background-image:none;
         position:relative;
         color:$primary-color;
+        font-size:$font-primary;
         & option{
             & :hover{
               background-color:$color-fourth !important;
@@ -101,14 +144,13 @@ a {
   }
   & .srch-lnk{
     border-right:2px solid $primary-color;
-    padding: 0;
+    padding:3px;
     & .lnk{
-      & a{
+      & .cmn-btn{
         display:flex;
         align-items: center;
         justify-content: center;
-        color:$primary-color;
-        background-color:$color-fourth;
+       @include cmn-btn();
         width: 100%;
         height: 100%;
       }
@@ -121,6 +163,7 @@ a {
         align-items: center;
         justify-content: center;
         color:$primary-color;
+        font-size:$font-primary;
         width: 100%;
         height: 100%;
         border-radius: 5px;
@@ -136,7 +179,7 @@ a {
 
 
 .datepicker-dropdown{
-  top:49px !important;
+  top:40px !important;
   background-color:$color-white;
 }
 .datepicker-days{
@@ -160,13 +203,13 @@ a {
 
 // header bottom
 #myHeader {
-  // position: fixed;
-  top: 0;
-  z-index: 999;
+  position:fixed;
+  z-index: 99;
 }
 
 #myHeader.sticky {
-  z-index: 999;
+  top: 0;
+  z-index: 99;
   @include tnsn-first();
   background-color: $primary-color;
   padding-top: 0 !important;
@@ -182,8 +225,10 @@ a {
   }
 
   & .nav-item {
-    margin: 0 20px;
-
+    margin: 0 24px;
+      & .nav-link{
+        font-size:$font-primary !important;
+      }
     & .nav-drpdn {
       position: relative;
 
@@ -220,7 +265,7 @@ a {
         position: absolute;
         font-family: FONTAWESOME;
         font-size: 40px;
-        top: 62px;
+        top:140px;
         left: 30px;
         visibility: visible;
         padding: 0px 24px;
@@ -241,7 +286,7 @@ a {
         position: absolute;
         font-family: FONTAWESOME;
         font-size: 40px;
-        top: 62px;
+        top:140px;
         right: 30px;
         visibility: visible;
         padding: 0px 24px;
@@ -268,7 +313,7 @@ a {
       }
       & .content{
         position:absolute;
-        bottom:25%;
+        bottom:15%;
         left:30%;
         z-index: 4;
         & .heading-cntnt{
@@ -282,6 +327,7 @@ a {
           color:$color-fourth;
           font-size:$font-big;
           font-weight:$font-bold;
+          font-family: Satisfy;
           text-align: end;
           letter-spacing: 5px;
         }
@@ -292,7 +338,7 @@ a {
 #ofr-sctn{
   & .ofr-contner{
     background-color:$primary-color;
-    padding: 15px 10px;
+    padding: 15px 15px;
     border-radius: 5px;
   & .image{
     position: relative;
@@ -313,8 +359,10 @@ a {
       position: absolute;
       top:20px;
       left:0;
-      background:$secondary-color-trsp;
+      background:$color-btn-trsp;
       color:$color-white;
+      font-size:$font-extra-sm;
+      font-weight:$font-bold;
       padding: 0 8px;
     }
   }
@@ -323,7 +371,7 @@ a {
     & .txt{
       & .txt-prcnt{
         & span{
-          font-size:$font-med;
+          font-size:$font-heading;
           font-weight:$font-bold;
           color:$color-fourth;
           font-family:$fourth-font;
@@ -331,18 +379,27 @@ a {
       }
       & .on-al{
         & span{
-          font-size:$font-med;
+          font-size:$font-sm;
           letter-spacing: 5px;
-          font-family:$fourth-font;
+          font-family:$third-font;
           color:$color-fourth;
           font-weight:$font-bold
         }
       }
       & .bk-nw{
-        & a{
+        & span{
           color:$primary-color;
           background:$color-fourth;
           padding: 15px 45px;
+          font-weight:$font-bold;
+          font-size:$font-primary;
+          position: relative;
+          box-shadow: 0px 0px 5px $color-dark;
+        }
+        & .spn-2{
+          position: absolute;
+          left: 40px;
+          bottom: 22px;
         }
       }
     }
@@ -364,7 +421,7 @@ a {
   background-position:center;
   background-size: cover;
   position:relative;
-  padding: 35px 0 0 0;
+  padding: 35px 0 35px 0;
   &::before{
     content:"";
     position:absolute;
@@ -372,25 +429,25 @@ a {
     left: 0;
     width: 100%;
     height:100%;
-    background-color: $primary-color-trsp;
+    background-color:$color-dark-tsnsp;
   }
   & .content{
-    padding: 30px 0 0 0;
+    padding: 30px 30px 0 0;
     & .heading{
-      color:$color-fourth;
+      color:$color-white;
     font-size:$font-sm;
     font-weight:$font-bold;
     }
     & .para{
-      color:$color-fourth;
-      font-size:$font-primary;
+      color:$color-white;
+      font-size:$font-extra-sm;
     }
-    & a{
-      color:$primary-color;
-      background:$color-fourth;
-      font-size:$font-primary;
+    & .cmn-btn{
+      @include cmn-btn();
       padding: 10px 20px;
       border-radius: 5px;
+      display:inline-block;
+      margin-top: 5px;
     }
   }
   & .carousel-pp{
@@ -408,9 +465,9 @@ a {
           content: "";
           position: absolute;
           font-family: FONTAWESOME;
-          font-size: 40px;
-          top: 32px;
-          left: -10px;
+          font-size: 30px;
+          top: 45px;
+          left:0;
           visibility: visible;
           padding: 0px 24px;
           border-radius: 52px;
@@ -429,9 +486,9 @@ a {
           content: "\f105";
           position: absolute;
           font-family: FONTAWESOME;
-          font-size: 40px;
-          top: 32px;
-          right: -10px;
+          font-size: 30px;
+          top:45px;
+          right:0;
           visibility: visible;
           padding: 0px 24px;
           border-radius: 52px;
@@ -440,5 +497,185 @@ a {
         }
       }
     }
+    & .item{
+      & img{
+        @include radius-big();
+        border:4px solid $primary-color;
+        position:relative;
+        filter: brightness(0.9);
+      }
+      & .content{
+        position: absolute;
+        bottom:10px;
+        left:10px;
+        width:100%;
+        & .name,.address{
+          color:$color-white;
+          font-size:$font-extra-sm;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          & i{
+            color:$primary-color;
+          }
+        }
+      }
+      & .dscnt{
+        position: absolute;
+        top:20px;
+        left:20px;
+        color:$color-white;
+        padding: 3px 10px;
+        font-size:$font-extra-sm;
+        font-weight:$font-bold;
+        background:$primary-color;
+        @include radius-sm();
+      }
+    }
   }
+}
+// CITIES SECTION
+#htls-in-city{
+  & .image-city{
+    overflow:hidden;
+    @include radius-big();
+    position:relative;
+    & img{
+      @include tnsn-first();
+      filter: brightness(0.5);
+      &:hover{
+        transform:scale(1.1);
+      }
+    }
+    & .htl-cnt{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color:$color-fourth;
+      background-color:$primary-color;
+      padding: 5px 10px;
+      font-size:$font-extra-sm;
+     @include radius-sm();
+}
+    & .content{
+      position:absolute;
+      bottom: 0;
+      left: 0;
+      padding:0 20px;
+      & .cty{
+        color:$color-white;
+        font-size:$font-primary;
+        font-weight:$font-bold;
+      }
+      & .para{
+        color:$color-white;
+        font-size:$font-extra-sm;
+      }
+    }
+  }
+}
+// HOTEL OWNER SECTION
+#htl-add{
+  background:url("../../images/hotel-wnr.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+  position:relative;
+  padding: 35px 0 35px 0;
+  &::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color:$color-dark-tsnsp;
+  }
+  & .head{
+    & .heading{
+      color:$color-white;
+      font-size:$font-sm;
+      font-weight:$font-bold;
+    }
+  }
+  & .para{
+    color:$color-white;
+    font-size:$font-extra-sm;
+  }
+  & .cmn-btn{
+    @include cmn-btn();
+    padding: 10px 20px;
+    border-radius: 5px;
+    display:inline-block;
+    margin-top: 5px;
+  }
+}
+// FOOTER SECTION
+// footer-top
+.footer-top{
+  background:$color-gry;
+  & .content-title{
+      position: relative;
+  }
+  & .content-title::before{
+      content: "";
+      position: absolute;
+      background: #ffffffcf;
+      width: 65px;
+      border-radius: 5px;
+      height: 5px;
+      bottom:-15px;
+  }
+  & .content a{
+      display: block;
+      margin-bottom:12px;
+  }
+  & .content a:hover{
+      transform:translateX(5px);
+      -webkit-transform:translateX(5px);
+      -moz-transform:translateX(5px);
+      -ms-transform:translateX(5px);
+      -o-transform:translateX(5px);
+  }
+  & .content-menu-icons li{
+      margin:0 8px;
+      & .icons{
+        background: #6ab6c8;
+        border-radius: 25px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+          @include radius-sm();
+        }
+      }
+  }
+}
+// footer-bottom
+#footer-htls-list{
+    background:$color-gry;
+    & .heading{
+      color:$color-white;
+      font-size:$font-heading;
+      font-weight:$font-bold;
+    }
+    & .htl-list{
+      & ul{
+        & li{
+          // text-align: center;
+          margin:3px 0;
+          & a{
+            font-size:$font-primary;
+            color:$color-white;
+            @include tnsn-first();
+            &:hover{
+              color:$primary-color;
+              text-decoration:underline;
+            }
+          }
+        }
+      }
+    }
 }

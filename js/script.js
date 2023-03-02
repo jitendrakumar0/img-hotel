@@ -47,7 +47,7 @@ $(document).ready(function () {
     $('.owl-carousel-pp').owlCarousel({
         items:2,
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         margin: 20,
         responsive: {
             0: {
