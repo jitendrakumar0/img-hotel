@@ -7,6 +7,13 @@
     -ms-transition:all 0.4s;
     -o-transition:all 0.4s;
 }
+@mixin tnsn-quick(){
+    transition:all 0.2s;
+    -webkit-transition:all 0.2s;
+    -moz-transition:all 0.2s;
+    -ms-transition:all 0.2s;
+    -o-transition:all 0.2s;
+}
 @mixin radius-sm(){
     border-radius:2px;
     -webkit-border-radius:2px;

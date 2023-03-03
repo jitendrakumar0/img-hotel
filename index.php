@@ -30,8 +30,8 @@
 </section>
 <!-- OFFER SECTION -->
 <SECTION class="ofr">
-    <div class="container-fluid" id="ofr-sctn">
-        <div class="container pt-5 pb-5">
+    <!-- <div class="container-fluid mt-5 mb-5" id="ofr-sctn">
+        <div class="container">
             <div class="row">
                 <div class="col-12 ofr-contner">
                     <div class="row">
@@ -71,19 +71,11 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <div class="container-fluid p-0 mt-5 mb-5">
+        <img src="images/offer.png" alt="" class="img-fluid w-100">
     </div>
 </SECTION>
-<!-- BOOK NOW SECTION -->
-<!-- <div class="container-fluid" id="bk-now">
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-12 image">
-                    <img src="images/booknow.png" alt="" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <!-- POPULAR HOTELS SECTION -->
 <div class="container-fluid mb-5" id="pp-hotels">
@@ -196,7 +188,41 @@
         </div>
     </div>
 </div>
-
+<!-- COUNTER SECTION -->
+<div class="container-fluid mb-5" id="counter-sec">
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-3">
+                <div class="amnt h-100">
+                    <div class="icon text-center"><i class="fa fa-users" aria-hidden="true"></i></div>
+                    <div class="counter text-center" data-speed="300">225</div>
+                    <div class="title text-center">New Visiters Every Week</div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="amnt h-100">
+                    <div class="icon text-center"><i class="fa fa-thumbs-up" aria-hidden="true"></i></div>
+                    <div class="counter text-center" data-speed="900">305</div>
+                    <div class="title text-center">Happy customers every year</div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="amnt h-100">
+                    <div class="icon text-center"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+                    <div class="counter text-center" data-speed="900">183</div>
+                    <div class="title text-center">Won Awards</div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="amnt h-100">
+                    <div class="icon text-center"><i class="fa fa-building" aria-hidden="true"></i></div>
+                    <div class="counter text-center" data-speed="900">145</div>
+                    <div class="title text-center">New Listing Every Week</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- HOTEL OWNER SECTION -->
 <div class="container-fluid mb-5" id="htl-add">
     <div class="container position-relative">

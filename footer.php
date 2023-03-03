@@ -1,17 +1,17 @@
 <!-- FOOTER SECTION -->
 <div class="container-fluid footer-top">
-    <div class="container pt-5">
+    <div class="container pt-5 pb-3">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 footer-content">
                 <h2 class="content-title text-white fs-20 fw-bold">
                     SUPPORT
                 </h2>
                 <div class="content mt-5">
-                    <a href="#" class="text-white fs-14">
-                        Email: example@gmail.com
+                    <a href="#" class="text-white fs-14 footer-links">
+                        E-mail: example@gmail.com
                     </a>
-                    <a href="#" class="text-white fs-14">
-                        Address: 7066 El Cajon Blvd, San Diego, CA 92115
+                    <a href="#" class="text-white fs-14 footer-links">
+                        Address: 414,Ande Wali Gali,Ghantaghar,Alwar
                     </a>
                 </div>
             </div>
@@ -21,32 +21,32 @@
                 </h2>
                 <div class="content mt-5">
                     <ul class="content-menu flex-column">
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Home
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 About Us
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Teams / Careers
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Services
                             </a>
                         </li>
 
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Investor Relations
@@ -61,31 +61,31 @@
                 </h2>
                 <div class="content mt-5">
                     <ul class="content-menu flex-column">
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Terms and conditions
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Privacy Policy
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Refund Policy
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Cyber Security
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Trust And Safety
@@ -100,34 +100,34 @@
                 </h2>
                 <div class="content mt-5">
                     <ul class="content-menu flex-column">
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Hotels in Delhi
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Hotels in Mumbai
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Hotels in Kolkata
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                                 Hotels in Noida
                             </a>
                         </li>
-                        <li>
+                        <li class="footer-links">
                             <a href="#" class="text-white fs-14">
                                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                                Hotels in Hyderabad
+                                View All Cities
                             </a>
                         </li>
                     </ul>
@@ -162,117 +162,28 @@
                     </ul>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
-<!-- footer-bottom -->
-<!-- <div class="container-fluid" id="footer-htls-list">
-    <div class="container pb-5">
+
+<div class="container-fluid pt-1 pb-1" id="copyright-sec">
+    <div class="container">
         <div class="row">
-            <div class="col-12 heading mb-2">
-                Our Hotels
-            </div>
-            <div class="col-2">
-                <div class="htl-list">
-                    <ul class="flex-column">
-                        <li>
-                            <a href="#">Hotels Near Me</a>
-                        </li>
-                        <li><a href="#">Hotels in Pachmadi</a></li>
-                        <li><a href="#">Hotels in Chittorgarh</a></li>
-                        <li><a href="#">Hotels in Manipur</a></li>
-                        <li><a href="#">Hotels in Hyderbad</a></li>
-                        <li><a href="#">Hotels in Ajmer</a></li>
-                        <li><a href="#">Hotels in Hridwar</a></li>
-                        <li><a href="#">Hotels in Dehradun</a></li>
-                        <li><a href="#">Hotels in Ranikhet</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="htl-list">
-                    <ul class="flex-column">
-                        <li><a href="#">Hotels in Pune</a></li>
-                        <li><a href="#">Hotels in Gurgaon</a></li>
-                        <li><a href="#">Hotels in Jaipur</a></li>
-                        <li><a href="#">Hotels Near Me</a></li>
-                        <li><a href="#">Hotels Near Me</a></li>
-                        <li><a href="#">Hotels Near Me</a></li>
-                        <li><a href="#">Hotels in Amroha</a></li>
-                        <li><a href="#">Hotels in Patna</a></li>
-                        <li><a href="#">Hotels in Ranchi</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="htl-list">
-                    <ul class="flex-column">
-                        <li><a href="#">Hotels in Manali</a></li>
-                        <li><a href="#">Hotels in Nainital</a></li>
-                        <li><a href="#">Hotels in Jammu</a></li>
-                        <li><a href="#">Hotels Near Me</a></li>
-                        <li><a href="#">Hotels in Pachmadi</a></li>
-                        <li><a href="#">Hotels in Chittorgarh</a></li>
-                        <li><a href="#">Hotels in Manipur</a></li>
-                        <li><a href="#">Hotels in Hyderbad</a></li>
-                        <li><a href="#">Hotels in Ajmer</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="htl-list">
-                    <ul class="flex-column">
-                        <li>
-                            <a href="#">Hotels in Kanpur</a>
-                        </li>
-                        <li><a href="#">Hotels in Lucknow</a></li>
-                        <li><a href="#">Hotels in Ghaziabad</a></li>
-                        <li><a href="#">Hotels in Amroha</a></li>
-                        <li><a href="#">Hotels in Patna</a></li>
-                        <li><a href="#">Hotels in Ranchi</a></li>
-                        <li><a href="#">Hotels in Gwalior</a></li>
-                        <li><a href="#">Hotels in Jhansi</a></li>
-                        <li><a href="#">Hotels in Bhopal</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="htl-list">
-                    <ul class="flex-column">
-                        <li>
-                            <a href="#">Hotels in Shimla</a>
-                        </li>
-                        <li><a href="#">Hotels in Manali</a></li>
-                        <li><a href="#">Hotels in Nainital</a></li>
-                        <li><a href="#">Hotels in Jammu</a></li>
-                        <li><a href="#">Hotels in Shrinagar</a></li>
-                        <li><a href="#">Hotels in Massouri</a></li>
-                        <li><a href="#">Hotels in Agra</a></li>
-                        <li><a href="#">Hotels in Jodhpur</a></li>
-                        <li><a href="#">Hotels in Udaipur</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="htl-list">
-                    <ul class="flex-column">
-                        <li>
-                            <a href="#">Hotels in Mumbai</a>
-                        </li>
-                        <li><a href="#">Hotels in Delhi</a></li>
-                        <li><a href="#">Hotels in Goa</a></li>
-                        <li><a href="#">Hotels in Pune</a></li>
-                        <li><a href="#">Hotels in Gurgaon</a></li>
-                        <li><a href="#">Hotels in Jaipur</a></li>
-                        <li><a href="#">Hotels in Alwar</a></li>
-                        <li><a href="#">Hotels in Chennai</a></li>
-                        <li><a href="#">Hotels in Noida</a></li>
-                    </ul>
+            <div class="col-12 d-flex align-items-center text-white fs-14">
+                <div class="ms-auto dev-by w-100 text-center">
+                    Copyright ©2021 All Rights Reserved-
+                    <a href="#">
+                        <span><b class="text-white">Design &amp; Developed By</b></span> <img
+                            src="images/footer-img.png" class="h-md-30px h-25px" alt=""
+                            data-bs-original-title="IMG Global Infotech" aria-label="IMG Global Infotech">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
+</div>
+
 
 <!-- IMPORTANT FILES -->
 

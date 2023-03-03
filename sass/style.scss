@@ -92,9 +92,18 @@ a {
 }
 
 // HEADER SECTION
+#myHeader{
+  z-index: 99;
+}
+#myHeader.sticky {
+  top: 0;
+  position:fixed;
+  z-index: 999;
+}
 .header-top {
   background-color: $color-white;
   border-top:2px solid $primary-color;
+  border-bottom:2px solid $primary-color;
   position:relative;
   z-index:999;
   & .form-container{
@@ -144,7 +153,7 @@ a {
   }
   & .srch-lnk{
     border-right:2px solid $primary-color;
-    padding:3px;
+    padding:2px;
     & .lnk{
       & .cmn-btn{
         display:flex;
@@ -175,11 +184,7 @@ a {
     }
   }
 }
-
-
-
 .datepicker-dropdown{
-  top:40px !important;
   background-color:$color-white;
 }
 .datepicker-days{
@@ -202,48 +207,78 @@ a {
 //   border-bottom:6px solid $color-dark;
 
 // header bottom
-#myHeader {
-  position:fixed;
-  z-index: 99;
-}
-
-#myHeader.sticky {
-  top: 0;
-  z-index: 99;
-  @include tnsn-first();
+.header-main {
   background-color: $primary-color;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-#myHeader {
-  background-color: $primary-color;
-
+  padding:10px 0;
   & .navbar-brand {
     color: $color-white;
     font-family: $third-font;
   }
 
   & .nav-item {
-    margin: 0 24px;
+      margin: 0 24px;
+      position: relative;
       & .nav-link{
         font-size:$font-primary !important;
       }
+      & .deep-menu {
+        position: absolute;
+        top:48px;
+        padding:10px 0px 5px 10px;
+        left: -12px;
+        z-index: 999;
+        width: 230px;
+        background: $color-white;
+        @include radius-sm();
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        @include tnsn-first();
+        & li {
+          margin: 5px 0;
+          & .menu-link {
+              color: $primary-color;
+              font-size:$font-primary;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+          & .menu-link:hover {
+              color:$color-btn;
+          }
+      }
+    }
     & .nav-drpdn {
       position: relative;
-
       &:before {
         content: "";
         position: absolute;
         font-family: "FONTAWESOME";
         top: 7px;
         right: -6px;
+        @include tnsn-quick();
       }
     }
   }
-
+  & .nav-item:hover .deep-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+  & .nav-item:hover .nav-link::before{
+    transform:rotate(180deg);
+}
   & .nav-link {
     color: $color-white;
+  }
+  #all-cty-lnk{
+    font-size:$font-primary;
+    @include tnsn-first();
+    &:hover{
+      color:$color-btn;
+    }
   }
 }
 
@@ -257,7 +292,7 @@ a {
     display: block !important;
     & .owl-prev {
       position: absolute;
-      top: 20%;
+      top:50%;
       left: 0;
       visibility: hidden;
       & span::before {
@@ -265,7 +300,7 @@ a {
         position: absolute;
         font-family: FONTAWESOME;
         font-size: 40px;
-        top:140px;
+        top:-30px;
         left: 30px;
         visibility: visible;
         padding: 0px 24px;
@@ -277,7 +312,7 @@ a {
 
     & .owl-next {
       position: absolute;
-      top: 20%;
+      top:50%;
       right: 0;
       visibility: hidden;
 
@@ -286,7 +321,7 @@ a {
         position: absolute;
         font-family: FONTAWESOME;
         font-size: 40px;
-        top:140px;
+        top:-30px;
         right: 30px;
         visibility: visible;
         padding: 0px 24px;
@@ -336,8 +371,8 @@ a {
 }
 // OFFER SECTION
 #ofr-sctn{
+  background-color:$primary-color;
   & .ofr-contner{
-    background-color:$primary-color;
     padding: 15px 15px;
     border-radius: 5px;
   & .image{
@@ -345,6 +380,7 @@ a {
     & img{
       border-radius: 10px;
       position:relative;
+      box-shadow: 0px 0px 5px $color-dark;
     }
     & img::after{
       content:"";
@@ -408,6 +444,7 @@ a {
     & img{
       max-width:200px;
       border-radius: 10px;
+      box-shadow: 0px 0px 5px $color-dark;
     }
   }
 }
@@ -448,6 +485,7 @@ a {
       border-radius: 5px;
       display:inline-block;
       margin-top: 5px;
+      box-shadow:0px 0px 5px $color-white;
     }
   }
   & .carousel-pp{
@@ -574,6 +612,45 @@ a {
     }
   }
 }
+// COUNTER SECTION
+#counter-sec{
+  background:url("../../images/counter-bg.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: cover;
+  position:relative;
+  padding:30px 0;
+  &::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color:$primary-color-trsp;
+  }
+  & .amnt{
+    box-shadow: 0px 0px 5px $color-dark;
+    padding: 15px 0;
+    @include radius-big();
+    & .icon{
+      & i{
+      color:$color-white;
+      font-size:$font-sm;
+      }
+    }
+    & .counter{
+      color:$color-white;
+      font-size:$font-med;
+      font-family:$fourth-font;
+      font-weight:$font-bold;
+    }
+    & .title{
+      color:$color-white;
+      font-size:$font-primary;
+    }
+  }
+}
 // HOTEL OWNER SECTION
 #htl-add{
   background:url("../../images/hotel-wnr.png");
@@ -608,6 +685,7 @@ a {
     border-radius: 5px;
     display:inline-block;
     margin-top: 5px;
+    box-shadow:0px 0px 5px $color-white;
   }
 }
 // FOOTER SECTION
@@ -630,17 +708,10 @@ a {
       display: block;
       margin-bottom:12px;
   }
-  & .content a:hover{
-      transform:translateX(5px);
-      -webkit-transform:translateX(5px);
-      -moz-transform:translateX(5px);
-      -ms-transform:translateX(5px);
-      -o-transform:translateX(5px);
-  }
   & .content-menu-icons li{
       margin:0 8px;
       & .icons{
-        background: #6ab6c8;
+        background:$color-btn;
         border-radius: 25px;
         width: 40px;
         height: 40px;
@@ -652,30 +723,30 @@ a {
         }
       }
   }
+  & .footer-links{
+    @include tnsn-first();
+    & :hover{
+      transform: translateX(5px) !important;
+      -webkit-transform: translateX(5px) !important;
+      -moz-transform: translateX(5px) !important;
+      -ms-transform: translateX(5px) !important;
+      -o-transform: translateX(5px) !important;
 }
-// footer-bottom
-#footer-htls-list{
-    background:$color-gry;
-    & .heading{
-      color:$color-white;
-      font-size:$font-heading;
-      font-weight:$font-bold;
-    }
-    & .htl-list{
-      & ul{
-        & li{
-          // text-align: center;
-          margin:3px 0;
-          & a{
-            font-size:$font-primary;
-            color:$color-white;
-            @include tnsn-first();
-            &:hover{
-              color:$primary-color;
-              text-decoration:underline;
-            }
-          }
-        }
+  }
+ 
+}
+// copyright
+#copyright-sec{
+  background:$primary-color;
+  & .dev-by{
+    font-size:$font-extra-sm;
+    & a{
+      & span b{
+        @include tnsn-first();
+      }
+      & :hover{
+        color:$color-btn !important;
       }
     }
+  }
 }
