@@ -1,5 +1,6 @@
 @import "variable";
 @import "mixin";
+@import "responsive";
 
 body {
   margin: 0;
@@ -53,205 +54,280 @@ a {
   text-decoration: none;
   @include tnsn-first();
 }
+
 // COMMON BUTTON
-.cmn-btn{
-  position:relative;
-  overflow:hidden;
+.cmn-btn {
+  position: relative;
+  overflow: hidden;
   @include tnsn-first();
-  &:before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:-210px;
-    background-color:$color-btn;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -210px;
+    background-color: $color-btn;
     @include tnsn-first();
   }
-  &:after{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    right:-210px;
-    background-color:$color-btn;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -210px;
+    background-color: $color-btn;
     @include tnsn-first();
-    z-index:1;
+    z-index: 1;
   }
-  & span{
-    position:relative;
+
+  & span {
+    position: relative;
     z-index: 2;
   }
-  &:hover::before{
-    left:0;
+
+  &:hover::before {
+    left: 0 !important;
   }
-  &:hover::after{
-    right:0;
+
+  &:hover::after {
+    right: 0 !important;
   }
 }
-
-// HEADER SECTION
-#myHeader{
+// COMMON SELECT
+.custom-select {
+  position: relative;
+  & select {
+    display: none;
+  }
+}
+.select-selected {
+  background-color:$color-white;
+  font-size:$font-extra-sm;
+  padding:10px 12px !important;
+  @include radius-md();
+  &:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    color:$color-dark;
+    border: 6px solid transparent;
+    border-color: $color-gry transparent transparent transparent;
+  }
+}
+.select-selected.select-arrow-active:after {
+  border-color: $color-gry transparent transparent transparent;
+}
+.select-items div,
+.select-selected {
+  color:$color-gry;
+  padding:10px 12px !important;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  font-size:$font-extra-sm;
+}
+.select-items {
+  position: absolute;
+  background-color:$color-white;
+  top: 100%;
+  left: 0;
+  right: 0;
   z-index: 99;
 }
+.select-hide {
+  display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+// HEADER SECTION
+#myHeader {
+  z-index: 99;
+}
+
 #myHeader.sticky {
   top: 0;
-  position:fixed;
+  position: fixed;
   z-index: 999;
 }
+
 .header-top {
   background-color: $color-white;
-  border-top:2px solid $primary-color;
-  border-bottom:2px solid $primary-color;
-  position:relative;
-  z-index:999;
-  & .form-container{
-    & .form{
-      border-right:2px solid $primary-color;
-      & input{
-        color:$primary-color;
-        font-size:$font-primary;
-        &::placeholder{
-          color:$primary-color;
+  border-top: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color;
+  position: relative;
+  z-index: 999;
+
+  & .form-container {
+    & .form {
+      border-right: 2px solid $primary-color;
+
+      & input {
+        color: $primary-color;
+        font-size: $font-primary;
+
+        &::placeholder {
+          color: $primary-color;
         }
       }
-      & .input-group-append{
-        & .input-group-text{
-          background-color:$color-white !important;
+
+      & .input-group-append {
+        & .input-group-text {
+          background-color: $color-white !important;
           border: none !important;
-          & i{
-            color:$primary-color;
+
+          & i {
+            color: $primary-color;
           }
         }
       }
     }
   }
-  & .guest-amnt{
-    border-right:2px solid $primary-color;
-    & .guest{
-      position:relative;
-      & select{
-        border:none;
-        background-image:none;
-        position:relative;
-        color:$primary-color;
-        font-size:$font-primary;
-        & option{
-            & :hover{
-              background-color:$color-fourth !important;
-            }
-        }
-      }
-      & i{
-        position: absolute;
-        right:20px;
-        top: 10px;
-        color:$primary-color;
-      }
+
+  & .guest-amnt {
+    border-right: 2px solid $primary-color;
+    & .select-items div, .select-selected{
+      color:$primary-color !important;
     }
+    & .select-selected:after{
+      top:17px !important;
+      border-color:$primary-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) !important;
+    }
+    & .select-selected.select-arrow-active:after {
+      border-color:$primary-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) !important;
   }
-  & .srch-lnk{
-    border-right:2px solid $primary-color;
-    padding:2px;
-    & .lnk{
-      & .cmn-btn{
-        display:flex;
+  }
+
+  & .srch-lnk {
+    border-right: 2px solid $primary-color;
+    padding: 2px;
+
+    & .lnk {
+      & .cmn-btn {
+        display: flex;
         align-items: center;
         justify-content: center;
-       @include cmn-btn();
+        @include cmn-btn();
         width: 100%;
         height: 100%;
       }
     }
   }
-  & .lgn-snp-lnk{
-    & .lnk{
-      & a{
-        display:flex;
+
+  & .lgn-snp-lnk {
+    & .lnk {
+      & a {
+        display: flex;
         align-items: center;
         justify-content: center;
-        color:$primary-color;
-        font-size:$font-primary;
+        color: $primary-color;
+        font-size: $font-primary;
         width: 100%;
         height: 100%;
         border-radius: 5px;
-        & img{
-          max-width:25px;
+
+        & img {
+          max-width: 25px;
           margin-right: 10px;
         }
       }
     }
   }
 }
-.datepicker-dropdown{
-  background-color:$color-white;
+
+.datepicker-dropdown {
+  background-color: $color-white;
 }
-.datepicker-days{
-  min-width:200px !important;
-  top:45px !important;
-  left:60px !important;
-  padding:0 20px !important;
+
+.datepicker-days {
+  min-width: 200px !important;
+  top: 45px !important;
+  left: 60px !important;
+  padding: 0 20px !important;
 }
-.datepicker .datepicker-switch,.datepicker td,.datepicker th{
-  color:$primary-color !important;
+
+.datepicker .datepicker-switch,
+.datepicker td,
+.datepicker th {
+  color: $primary-color !important;
   font-weight: lighter !important;
 }
-.datepicker table tr td.new, .datepicker table tr td.old{
-  color:$secondary-color-trsp !important;
+
+.datepicker table tr td.new,
+.datepicker table tr td.old {
+  color: $secondary-color-trsp !important;
 }
-.datepicker td, .datepicker th{
-  min-width:35px !important;
+
+.datepicker td,
+.datepicker th {
+  min-width: 35px !important;
 }
+
 // .datepicker-dropdown:after{
 //   border-bottom:6px solid $color-dark;
 
 // header bottom
 .header-main {
   background-color: $primary-color;
-  padding:10px 0;
+  padding: 10px 0;
+
   & .navbar-brand {
     color: $color-white;
     font-family: $third-font;
   }
 
   & .nav-item {
-      margin: 0 24px;
-      position: relative;
-      & .nav-link{
-        font-size:$font-primary !important;
-      }
-      & .deep-menu {
-        position: absolute;
-        top:48px;
-        padding:10px 0px 5px 10px;
-        left: -12px;
-        z-index: 999;
-        width: 230px;
-        background: $color-white;
-        @include radius-sm();
-        overflow: hidden;
-        opacity: 0;
-        visibility: hidden;
-        @include tnsn-first();
-        & li {
-          margin: 5px 0;
-          & .menu-link {
-              color: $primary-color;
-              font-size:$font-primary;
-              display: -webkit-box;
-              -webkit-line-clamp: 1;
-              -webkit-box-orient: vertical;
-              text-overflow: ellipsis;
-              overflow: hidden;
-          }
-          & .menu-link:hover {
-              color:$color-btn;
-          }
+    margin: 0 23px;
+    position: relative;
+
+    & .nav-link {
+      font-size: $font-primary !important;
+    }
+
+    & .deep-menu {
+      position: absolute;
+      top: 48px;
+      padding: 10px 0px 5px 10px;
+      left: -12px;
+      z-index: 999;
+      width: 230px;
+      background: $color-white;
+      @include radius-sm();
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      @include tnsn-first();
+
+      & li {
+        margin: 5px 0;
+
+        & .menu-link {
+          color: $primary-color;
+          font-size: $font-primary;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        & .menu-link:hover {
+          color: $color-btn;
+        }
       }
     }
+
     & .nav-drpdn {
       position: relative;
+
       &:before {
         content: "";
         position: absolute;
@@ -261,46 +337,84 @@ a {
         @include tnsn-quick();
       }
     }
+
   }
+
   & .nav-item:hover .deep-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
-}
-  & .nav-item:hover .nav-link::before{
-    transform:rotate(180deg);
-}
+  }
+
+  & .nav-item:hover .nav-link::before {
+    transform: rotate(180deg);
+  }
+
   & .nav-link {
     color: $color-white;
   }
-  #all-cty-lnk{
-    font-size:$font-primary;
+
+  & #all-cty-lnk {
+    font-size: $font-primary;
     @include tnsn-first();
-    &:hover{
-      color:$color-btn;
+
+    &:hover {
+      color: $color-btn;
     }
+  }
+}
+
+// HEADER MOBILE
+.header-main-mobile {
+  & .nav-item {
+    margin: 0px !important;
+  }
+
+  & .nav-drpdn {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      font-family: "FONTAWESOME";
+      top: 7px;
+      right: 10px !important;
+    }
+  }
+
+  & .deep-menu {
+    left: 0 !important;
+  }
+
+  & .navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
   }
 }
 
 // BOOKING SECTION
 #bkng-section {
-  position:relative;
+  position: relative;
+
   & .owl-dots {
     display: none;
   }
+
   & .owl-nav {
     display: block !important;
+
     & .owl-prev {
       position: absolute;
-      top:50%;
+      top: 50%;
       left: 0;
       visibility: hidden;
+
       & span::before {
         content: "";
         position: absolute;
         font-family: FONTAWESOME;
         font-size: 40px;
-        top:-30px;
+        top: -30px;
         left: 30px;
         visibility: visible;
         padding: 0px 24px;
@@ -312,7 +426,7 @@ a {
 
     & .owl-next {
       position: absolute;
-      top:50%;
+      top: 50%;
       right: 0;
       visibility: hidden;
 
@@ -321,7 +435,7 @@ a {
         position: absolute;
         font-family: FONTAWESOME;
         font-size: 40px;
-        top:-30px;
+        top: -30px;
         right: 30px;
         visibility: visible;
         padding: 0px 24px;
@@ -331,181 +445,269 @@ a {
       }
     }
   }
-    & .item{
-      position: relative;
-      &::before{
-        content:"";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #0000005d;
-        z-index: 2;
-      }
-      & img{
-        position: relative;
-      }
-      & .content{
-        position:absolute;
-        bottom:15%;
-        left:30%;
-        z-index: 4;
-        & .heading-cntnt{
-          color:$color-fourth;
-          font-size:$font-big;
-          font-family: Satisfy;
-          font-weight:$font-bold;
-          letter-spacing: 5px;
-        }
-        & .para-cntnt{
-          color:$color-fourth;
-          font-size:$font-big;
-          font-weight:$font-bold;
-          font-family: Satisfy;
-          text-align: end;
-          letter-spacing: 5px;
-        }
-      }
-  }
-}
-// OFFER SECTION
-#ofr-sctn{
-  background-color:$primary-color;
-  & .ofr-contner{
-    padding: 15px 15px;
-    border-radius: 5px;
-  & .image{
+
+  & .item {
     position: relative;
-    & img{
-      border-radius: 10px;
-      position:relative;
-      box-shadow: 0px 0px 5px $color-dark;
-    }
-    & img::after{
-      content:"";
+
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
-      left:0;
-      width:500px;
-      height:500px;
-      background-color:$secondary-color-trsp;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0000005d;
+      z-index: 2;
     }
-    & .ofr-text{
+
+    & img {
+      position: relative;
+    }
+
+    & .content {
       position: absolute;
-      top:20px;
-      left:0;
-      background:$color-btn-trsp;
-      color:$color-white;
-      font-size:$font-extra-sm;
-      font-weight:$font-bold;
-      padding: 0 8px;
-    }
-  }
-  & .txt-bx{
-    border-radius: 5px;
-    & .txt{
-      & .txt-prcnt{
-        & span{
-          font-size:$font-heading;
-          font-weight:$font-bold;
-          color:$color-fourth;
-          font-family:$fourth-font;
-        }
+      bottom: 15%;
+      left: 30%;
+      z-index: 4;
+
+      & .heading-cntnt {
+        color: $color-fourth;
+        font-size: $font-big;
+        font-family: Satisfy;
+        font-weight: $font-bold;
+        letter-spacing: 5px;
       }
-      & .on-al{
-        & span{
-          font-size:$font-sm;
-          letter-spacing: 5px;
-          font-family:$third-font;
-          color:$color-fourth;
-          font-weight:$font-bold
-        }
+
+      & .para-cntnt {
+        color: $color-fourth;
+        font-size: $font-big;
+        font-weight: $font-bold;
+        font-family: Satisfy;
+        text-align: end;
+        letter-spacing: 5px;
       }
-      & .bk-nw{
-        & span{
-          color:$primary-color;
-          background:$color-fourth;
-          padding: 15px 45px;
-          font-weight:$font-bold;
-          font-size:$font-primary;
-          position: relative;
-          box-shadow: 0px 0px 5px $color-dark;
-        }
-        & .spn-2{
-          position: absolute;
-          left: 40px;
-          bottom: 22px;
-        }
-      }
-    }
-  }
-  & .qr-cntnr{
-    & img{
-      max-width:200px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 5px $color-dark;
     }
   }
 }
-}
 
-// POPULAR HOTELS SECTION
-
-#pp-hotels{
-  background:url("../../images/hotels-bg.png");
-  background-repeat:no-repeat;
-  background-position:center;
+// HOME SECTION SM-MD 
+#bkng-sm-md {
+  background: url("../../images/bkng-sec-img2.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  position:relative;
-  padding: 35px 0 35px 0;
-  &::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height:100%;
-    background-color:$color-dark-tsnsp;
-  }
-  & .content{
-    padding: 30px 30px 0 0;
-    & .heading{
-      color:$color-white;
-    font-size:$font-sm;
-    font-weight:$font-bold;
+  padding: 30px 0;
+  & .bkng-form {
+    background-color: $primary-color-trsp;
+    padding: 15px 10px;
+    @include radius-md();
+    & .dstntn {
+      & label {
+        font-size: $font-primary;
+        color: $color-white;
+      }
+      & input {
+        font-size: $font-extra-sm;
+        padding:10px 12px;
+      }
     }
-    & .para{
-      color:$color-white;
-      font-size:$font-extra-sm;
+    & .check-in,
+    .check-out {
+      & label {
+        font-size: $font-primary;
+        color: $color-white;
+      }
+      & input {
+        font-size: $font-extra-sm;
+        padding:10px 12px;
+      }
+      & .input-group-append {
+        & .input-group-text {
+          border: none !important;
+          background-color: $color-white;
+          height: 100%;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          & i {
+            color: $primary-color;
+          }
+        }
+      }
     }
     & .cmn-btn{
       @include cmn-btn();
       padding: 10px 20px;
       border-radius: 5px;
-      display:inline-block;
+      display: inline-block;
+      width:100%;
+      text-align: center;
       margin-top: 5px;
-      box-shadow:0px 0px 5px $color-white;
+      box-shadow: 0px 0px 5px $color-white;
+      &:after{
+        right:-320px;
+      }
+      &::before{
+        left:-320px;
+      }
     }
   }
-  & .carousel-pp{
+}
+
+// OFFER SECTION
+#ofr-sctn {
+  background-color: $primary-color;
+
+  & .ofr-contner {
+    padding: 15px 15px;
+    border-radius: 5px;
+
+    & .image {
+      position: relative;
+
+      & img {
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0px 0px 5px $color-dark;
+      }
+
+      & img::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 500px;
+        background-color: $secondary-color-trsp;
+      }
+
+      & .ofr-text {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background: $color-btn-trsp;
+        color: $color-white;
+        font-size: $font-extra-sm;
+        font-weight: $font-bold;
+        padding: 0 8px;
+      }
+    }
+
+    & .txt-bx {
+      border-radius: 5px;
+
+      & .txt {
+        & .txt-prcnt {
+          & span {
+            font-size: $font-heading;
+            font-weight: $font-bold;
+            color: $color-fourth;
+            font-family: $fourth-font;
+          }
+        }
+
+        & .on-al {
+          & span {
+            font-size: $font-sm;
+            letter-spacing: 5px;
+            font-family: $third-font;
+            color: $color-fourth;
+            font-weight: $font-bold
+          }
+        }
+
+        & .bk-nw {
+          & span {
+            color: $primary-color;
+            background: $color-fourth;
+            padding: 15px 45px;
+            font-weight: $font-bold;
+            font-size: $font-primary;
+            position: relative;
+            box-shadow: 0px 0px 5px $color-dark;
+          }
+
+          & .spn-2 {
+            position: absolute;
+            left: 40px;
+            bottom: 22px;
+          }
+        }
+      }
+    }
+
+    & .qr-cntnr {
+      & img {
+        max-width: 200px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px $color-dark;
+      }
+    }
+  }
+}
+
+// POPULAR HOTELS SECTION
+
+#pp-hotels {
+  background: url("../../images/hotels-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 35px 0 35px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-dark-tsnsp;
+  }
+
+  & .content {
+    & .heading {
+      color: $color-white;
+      font-size: $font-sm;
+      font-weight: $font-bold;
+    }
+
+    & .para {
+      color: $color-white;
+      font-size: $font-extra-sm;
+    }
+
+    & .cmn-btn {
+      @include cmn-btn();
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 5px;
+      box-shadow: 0px 0px 5px $color-white;
+    }
+  }
+
+  & .carousel-pp {
     & .owl-dots {
       display: none;
     }
+
     & .owl-nav {
       display: block !important;
+
       & .owl-prev {
         position: absolute;
-        top: 20%;
+        top: 50%;
         left: 0;
         visibility: hidden;
+
         & span::before {
           content: "";
           position: absolute;
           font-family: FONTAWESOME;
           font-size: 30px;
-          top: 45px;
-          left:0;
+          top: -20px;
+          left: 0;
           visibility: visible;
           padding: 0px 24px;
           border-radius: 52px;
@@ -513,20 +715,20 @@ a {
           color: $color-white;
         }
       }
-  
+
       & .owl-next {
         position: absolute;
-        top: 20%;
+        top: 50%;
         right: 0;
         visibility: hidden;
-  
+
         & span::before {
           content: "\f105";
           position: absolute;
           font-family: FONTAWESOME;
           font-size: 30px;
-          top:45px;
-          right:0;
+          top: -20px;
+          right: 0;
           visibility: visible;
           padding: 0px 24px;
           border-radius: 52px;
@@ -535,217 +737,264 @@ a {
         }
       }
     }
-    & .item{
-      & img{
+
+    & .item {
+      & img {
         @include radius-big();
-        border:4px solid $primary-color;
-        position:relative;
+        border: 4px solid $primary-color;
+        position: relative;
         filter: brightness(0.9);
       }
-      & .content{
+
+      & .content {
         position: absolute;
-        bottom:10px;
-        left:10px;
-        width:100%;
-        & .name,.address{
-          color:$color-white;
-          font-size:$font-extra-sm;
+        bottom: 10px;
+        width: 100%;
+        padding: 0 15px;
+
+        & .name,
+        .address {
+          color: $color-white;
+          font-size: $font-extra-sm;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          & i{
-            color:$primary-color;
+
+          & i {
+            color: $primary-color;
           }
         }
+
+        & .address {
+          margin-left: 30px !important;
+        }
       }
-      & .dscnt{
+
+      & .dscnt {
         position: absolute;
-        top:20px;
-        left:20px;
-        color:$color-white;
+        top: 20px;
+        left: 20px;
+        color: $color-white;
         padding: 3px 10px;
-        font-size:$font-extra-sm;
-        font-weight:$font-bold;
-        background:$primary-color;
+        font-size: $font-extra-sm;
+        font-weight: $font-bold;
+        background: $primary-color;
         @include radius-sm();
       }
     }
   }
 }
+
 // CITIES SECTION
-#htls-in-city{
-  & .image-city{
-    overflow:hidden;
+#htls-in-city {
+  & .image-city {
+    overflow: hidden;
     @include radius-big();
-    position:relative;
-    & img{
+    position: relative;
+    height: 230px;
+
+    & img {
       @include tnsn-first();
       filter: brightness(0.5);
-      &:hover{
-        transform:scale(1.1);
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
-    & .htl-cnt{
+
+    & .htl-cnt {
       position: absolute;
       top: 20px;
       left: 20px;
-      color:$color-fourth;
-      background-color:$primary-color;
+      color: $color-fourth;
+      background-color: $primary-color;
       padding: 5px 10px;
-      font-size:$font-extra-sm;
-     @include radius-sm();
-}
-    & .content{
-      position:absolute;
+      font-size: $font-extra-sm;
+      @include radius-sm();
+    }
+
+    & .content {
+      position: absolute;
       bottom: 0;
       left: 0;
-      padding:0 20px;
-      & .cty{
-        color:$color-white;
-        font-size:$font-primary;
-        font-weight:$font-bold;
+      padding: 0 20px;
+
+      & .cty {
+        color: $color-white;
+        font-size: $font-primary;
+        font-weight: $font-bold;
       }
-      & .para{
-        color:$color-white;
-        font-size:$font-extra-sm;
+
+      & .para {
+        color: $color-white;
+        font-size: $font-extra-sm;
       }
     }
   }
 }
+
 // COUNTER SECTION
-#counter-sec{
-  background:url("../../images/counter-bg.png");
-  background-repeat:no-repeat;
-  background-position:center;
+#counter-sec {
+  background: url("../../images/counter-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  position:relative;
-  padding:30px 0;
-  &::before{
-    content:"";
-    position:absolute;
-    top:0;
+  position: relative;
+  padding: 30px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    height:100%;
-    background-color:$primary-color-trsp;
+    height: 100%;
+    background-color: $primary-color-trsp;
   }
-  & .amnt{
-    box-shadow: 0px 0px 5px $color-dark;
-    padding: 15px 0;
+
+  & .amnt {
+    padding: 18px 15px;
     @include radius-big();
-    & .icon{
-      & i{
-      color:$color-white;
-      font-size:$font-sm;
+    height: 150px;
+    @include tnsn-first();
+
+    &:hover {
+      box-shadow: 0px 0px 8px $color-dark;
+    }
+
+    & .icon {
+      & i {
+        color: $color-white;
+        font-size: $font-sm;
       }
     }
-    & .counter{
-      color:$color-white;
-      font-size:$font-med;
-      font-family:$fourth-font;
-      font-weight:$font-bold;
+
+    & .counter {
+      color: $color-white;
+      font-size: $font-med;
+      font-family: $fourth-font;
+      font-weight: $font-bold;
     }
-    & .title{
-      color:$color-white;
-      font-size:$font-primary;
+
+    & .title {
+      color: $color-white;
+      font-size: $font-primary;
     }
   }
 }
+
 // HOTEL OWNER SECTION
-#htl-add{
-  background:url("../../images/hotel-wnr.png");
-  background-repeat:no-repeat;
-  background-position:center;
+#htl-add {
+  background: url("../../images/hotel-wnr.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  position:relative;
+  position: relative;
   padding: 35px 0 35px 0;
-  &::before{
-    content:"";
-    position:absolute;
-    top:0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    height:100%;
-    background-color:$color-dark-tsnsp;
+    height: 100%;
+    background-color: $color-dark-tsnsp;
   }
-  & .head{
-    & .heading{
-      color:$color-white;
-      font-size:$font-sm;
-      font-weight:$font-bold;
+
+  & .head {
+    & .heading {
+      color: $color-white;
+      font-size: $font-sm;
+      font-weight: $font-bold;
     }
   }
-  & .para{
-    color:$color-white;
-    font-size:$font-extra-sm;
+
+  & .para {
+    color: $color-white;
+    font-size: $font-extra-sm;
   }
-  & .cmn-btn{
+
+  & .cmn-btn {
     @include cmn-btn();
     padding: 10px 20px;
     border-radius: 5px;
-    display:inline-block;
+    display: inline-block;
     margin-top: 5px;
-    box-shadow:0px 0px 5px $color-white;
+    box-shadow: 0px 0px 5px $color-white;
   }
 }
+
 // FOOTER SECTION
 // footer-top
-.footer-top{
-  background:$color-gry;
-  & .content-title{
-      position: relative;
+.footer-top {
+  background: $color-gry;
+
+  & .content-title {
+    position: relative;
   }
-  & .content-title::before{
-      content: "";
-      position: absolute;
-      background: #ffffffcf;
-      width: 65px;
-      border-radius: 5px;
-      height: 5px;
-      bottom:-15px;
+
+  & .content-title::before {
+    content: "";
+    position: absolute;
+    background: #ffffffcf;
+    width: 65px;
+    border-radius: 5px;
+    height: 5px;
+    bottom: -15px;
   }
-  & .content a{
-      display: block;
-      margin-bottom:12px;
+
+  & .content a {
+    display: block;
+    margin-bottom: 12px;
   }
-  & .content-menu-icons li{
-      margin:0 8px;
-      & .icons{
-        background:$color-btn;
-        border-radius: 25px;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:hover{
-          @include radius-sm();
-        }
+
+  & .content-menu-icons li {
+    margin-right: 10px;
+
+    & .icons {
+      background: $color-btn;
+      border-radius: 25px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        @include radius-sm();
       }
+    }
   }
-  & .footer-links{
+
+  & .footer-links {
     @include tnsn-first();
-    & :hover{
+
+    & :hover {
       transform: translateX(5px) !important;
       -webkit-transform: translateX(5px) !important;
       -moz-transform: translateX(5px) !important;
       -ms-transform: translateX(5px) !important;
       -o-transform: translateX(5px) !important;
-}
+    }
   }
- 
+
 }
+
 // copyright
-#copyright-sec{
-  background:$primary-color;
-  & .dev-by{
-    font-size:$font-extra-sm;
-    & a{
-      & span b{
+#copyright-sec {
+  background: $primary-color;
+
+  & .dev-by {
+    font-size: $font-extra-sm;
+
+    & a {
+      & span b {
         @include tnsn-first();
       }
-      & :hover{
-        color:$color-btn !important;
+
+      & :hover {
+        color: $color-btn !important;
       }
     }
   }
