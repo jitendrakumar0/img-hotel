@@ -33,8 +33,8 @@
                     <div class="form-container w-100 h-100">
                         <form class="row form position-relative h-100">
                             <div class="w-100">
-                                <div class="input-group date" id="datepicker">
-                                    <input type="text" class="form-control" id="date" placeholder="check-in">
+                                <div class="input-group date h-100" id="datepicker">
+                                    <input type="text" class="form-control" id="date" placeholder="Check-In">
                                     <span class="input-group-append">
                                         <span class="input-group-text">
                                             <i class="fa fa-calendar"></i>
@@ -49,8 +49,8 @@
                     <div class="form-container w-100 h-100">
                         <form class="row form position-relative h-100">
                             <div class="w-100">
-                                <div class="input-group date" id="datepicker-2">
-                                    <input type="text" class="form-control" id="date" placeholder="check-out">
+                                <div class="input-group date h-100" id="datepicker-2">
+                                    <input type="text" class="form-control" id="date" placeholder="Check-Out">
                                     <span class="input-group-append">
                                         <span class="input-group-text">
                                             <i class="fa fa-calendar"></i>
@@ -302,182 +302,100 @@
                         <a class="navbar-brand fw-bold" href="index.php">
                             HOTEL
                         </a>
-                        <button class="navbar-toggler pe-0" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapsibleNavbar">
-                            <span class="navbar-toggler-icon display-inline">
-                                <i class="fa fa-bars text-white" aria-hidden="true"></i>
-                            </span>
+                        <button class="btn-canvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                            <span><i class="fa fa-bars" aria-hidden="true"></i></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn">Mumbai</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Andheri East</a></li>
-                                        <li><a href="#" class="menu-link">Andheri West</a></li>
-                                        <li><a href="#" class="menu-link">Thane</a></li>
-                                        <li><a href="#" class="menu-link">Chhatrapati Shivaji International Airport</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Saki Naka</a></li>
-                                        <li><a href="#" class="menu-link">Bandra</a></li>
-                                        <li><a href="#" class="menu-link">Colaba</a></li>
-                                        <li><a href="#" class="menu-link">Bandra Kurla Complex</a></li>
-                                        <li><a href="#" class="menu-link">Mumbai Cst Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="listing.php">Delhi</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Paharganj</a></li>
-                                        <li><a href="#" class="menu-link">Karol Bagh</a></li>
-                                        <li><a href="#" class="menu-link">Janakpuri</a></li>
-                                        <li><a href="#" class="menu-link">Dwarka, New Delhi</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Mahipalpur</a></li>
-                                        <li><a href="#" class="menu-link">Indira Gandhi International Airport</a></li>
-                                        <li><a href="#" class="menu-link">Saket</a></li>
-                                        <li><a href="#" class="menu-link">Lajpat Nagar</a></li>
-                                        <li><a href="#" class="menu-link">New Delhi Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn link-agent" href="agent.php">Bangalore</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Koramangala</a></li>
-                                        <li><a href="#" class="menu-link">Mg Road</a></li>
-                                        <li><a href="#" class="menu-link">Rajaji Nagar</a></li>
-                                        <li><a href="#" class="menu-link">Indiranagar</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Jayanagar</a></li>
-                                        <li><a href="#" class="menu-link">Madiwala</a></li>
-                                        <li><a href="#" class="menu-link">Yesvantpur Railway Station</a></li>
-                                        <li><a href="#" class="menu-link">Marathahalli</a></li>
-                                        <li><a href="#" class="menu-link">Hsr Layout</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="blog.php">Chennai</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Paharganj</a></li>
-                                        <li><a href="#" class="menu-link">Karol Bagh</a></li>
-                                        <li><a href="#" class="menu-link">Janakpuri</a></li>
-                                        <li><a href="#" class="menu-link">Dwarka, New Delhi</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Mahipalpur</a></li>
-                                        <li><a href="#" class="menu-link">Indira Gandhi International Airport</a></li>
-                                        <li><a href="#" class="menu-link">Saket</a></li>
-                                        <li><a href="#" class="menu-link">Lajpat Nagar</a></li>
-                                        <li><a href="#" class="menu-link">New Delhi Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="blog.php">Kolkata</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Andheri East</a></li>
-                                        <li><a href="#" class="menu-link">Andheri West</a></li>
-                                        <li><a href="#" class="menu-link">Thane</a></li>
-                                        <li><a href="#" class="menu-link">Chhatrapati Shivaji International Airport</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Saki Naka</a></li>
-                                        <li><a href="#" class="menu-link">Bandra</a></li>
-                                        <li><a href="#" class="menu-link">Colaba</a></li>
-                                        <li><a href="#" class="menu-link">Bandra Kurla Complex</a></li>
-                                        <li><a href="#" class="menu-link">Mumbai Cst Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="blog.php">Hyderabad</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Paharganj</a></li>
-                                        <li><a href="#" class="menu-link">Karol Bagh</a></li>
-                                        <li><a href="#" class="menu-link">Janakpuri</a></li>
-                                        <li><a href="#" class="menu-link">Dwarka, New Delhi</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Mahipalpur</a></li>
-                                        <li><a href="#" class="menu-link">Indira Gandhi International Airport</a></li>
-                                        <li><a href="#" class="menu-link">Saket</a></li>
-                                        <li><a href="#" class="menu-link">Lajpat Nagar</a></li>
-                                        <li><a href="#" class="menu-link">New Delhi Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="blog.php">pune</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Koramangala</a></li>
-                                        <li><a href="#" class="menu-link">Mg Road</a></li>
-                                        <li><a href="#" class="menu-link">Rajaji Nagar</a></li>
-                                        <li><a href="#" class="menu-link">Indiranagar</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Jayanagar</a></li>
-                                        <li><a href="#" class="menu-link">Madiwala</a></li>
-                                        <li><a href="#" class="menu-link">Yesvantpur Railway Station</a></li>
-                                        <li><a href="#" class="menu-link">Marathahalli</a></li>
-                                        <li><a href="#" class="menu-link">Hsr Layout</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="blog.php">Gurgaon</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Andheri East</a></li>
-                                        <li><a href="#" class="menu-link">Andheri West</a></li>
-                                        <li><a href="#" class="menu-link">Thane</a></li>
-                                        <li><a href="#" class="menu-link">Chhatrapati Shivaji International Airport</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Saki Naka</a></li>
-                                        <li><a href="#" class="menu-link">Bandra</a></li>
-                                        <li><a href="#" class="menu-link">Colaba</a></li>
-                                        <li><a href="#" class="menu-link">Bandra Kurla Complex</a></li>
-                                        <li><a href="#" class="menu-link">Mumbai Cst Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link nav-drpdn" href="blog.php">Noida</a>
-                                    <ul class="deep-menu submenu-home flex-column">
-                                        <h3 class="heading fs-15 fw-bold">Popular Areas</h3>
-                                        <li><a href="#" class="menu-link">Andheri East</a></li>
-                                        <li><a href="#" class="menu-link">Andheri West</a></li>
-                                        <li><a href="#" class="menu-link">Thane</a></li>
-                                        <li><a href="#" class="menu-link">Chhatrapati Shivaji International Airport</a>
-                                        </li>
-                                        <li><a href="#" class="menu-link">Saki Naka</a></li>
-                                        <li><a href="#" class="menu-link">Bandra</a></li>
-                                        <li><a href="#" class="menu-link">Colaba</a></li>
-                                        <li><a href="#" class="menu-link">Bandra Kurla Complex</a></li>
-                                        <li><a href="#" class="menu-link">Mumbai Cst Railway Station</a></li>
-                                        <li><a href="#" class="menu-link view-all">View All <i
-                                                    class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="all-cty-lnk" href="blog.php">All Cities</a>
-                                </li>
-                            </ul>
-                        </div>
                     </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+            <a href="#" class="lgn-snp-lnk">
+                <img src="images/login-img-2.png" alt="" class="img-fluid w-10 me-2">
+                Login/Signup
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="mySidenav" class="sidenav">
+                <div id="cssmenu">
+                    <ul class="float_left p-0 cs-list flex-column">
+                        <li class="has-sub open"><a>Mumbai</a>
+                            <ul class="ps-3 flex-column">
+                                <li><a href="#" class="menu-link">Andheri East</a></li>
+                                <li><a href="#" class="menu-link">Andheri West</a></li>
+                                <li><a href="#" class="menu-link">Thane</a></li>
+                                <li><a href="#" class="menu-link">Chhatrapati Shivaji International Airport</a>
+                                </li>
+                                <li><a href="#" class="menu-link">Saki Naka</a></li>
+                                <li><a href="#" class="menu-link">Bandra</a></li>
+                                <li><a href="#" class="menu-link">Colaba</a></li>
+                                <li><a href="#" class="menu-link">Bandra Kurla Complex</a></li>
+                                <li><a href="#" class="menu-link">Mumbai Cst Railway Station</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub"><a href="#">Delhi</a>
+                            <ul class="ps-3 flex-column">
+                                <li><a href="#" class="menu-link">Paharganj</a></li>
+                                <li><a href="#" class="menu-link">Karol Bagh</a></li>
+                                <li><a href="#" class="menu-link">Janakpuri</a></li>
+                                <li><a href="#" class="menu-link">Dwarka, New Delhi</a>
+                                </li>
+                                <li><a href="#" class="menu-link">Mahipalpur</a></li>
+                                <li><a href="#" class="menu-link">Indira Gandhi International Airport</a></li>
+                                <li><a href="#" class="menu-link">Saket</a></li>
+                                <li><a href="#" class="menu-link">Lajpat Nagar</a></li>
+                                <li><a href="#" class="menu-link">New Delhi Railway Station</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub"><a href="#">Bangalore</a>
+                            <ul class="ps-3 flex-column">
+                                <li><a href="#" class="menu-link">Koramangala</a></li>
+                                <li><a href="#" class="menu-link">Mg Road</a></li>
+                                <li><a href="#" class="menu-link">Rajaji Nagar</a></li>
+                                <li><a href="#" class="menu-link">Indiranagar</a>
+                                </li>
+                                <li><a href="#" class="menu-link">Jayanagar</a></li>
+                                <li><a href="#" class="menu-link">Madiwala</a></li>
+                                <li><a href="#" class="menu-link">Yesvantpur Railway Station</a></li>
+                                <li><a href="#" class="menu-link">Marathahalli</a></li>
+                                <li><a href="#" class="menu-link">Hsr Layout</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub"><a href="#">Noida</a>
+                            <ul class="ps-3 flex-column">
+                                <li><a href="#" class="menu-link">Andheri East</a></li>
+                                <li><a href="#" class="menu-link">Andheri West</a></li>
+                                <li><a href="#" class="menu-link">Thane</a></li>
+                                <li><a href="#" class="menu-link">Chhatrapati Shivaji International Airport</a>
+                                </li>
+                                <li><a href="#" class="menu-link">Saki Naka</a></li>
+                                <li><a href="#" class="menu-link">Bandra</a></li>
+                                <li><a href="#" class="menu-link">Colaba</a></li>
+                                <li><a href="#" class="menu-link">Bandra Kurla Complex</a></li>
+                                <li><a href="#" class="menu-link">Mumbai Cst Railway Station</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub"><a href="#">Hyderabad</a>
+                            <ul class="ps-3 flex-column">
+                                <li><a href="#" class="menu-link">Paharganj</a></li>
+                                <li><a href="#" class="menu-link">Karol Bagh</a></li>
+                                <li><a href="#" class="menu-link">Janakpuri</a></li>
+                                <li><a href="#" class="menu-link">Dwarka, New Delhi</a>
+                                </li>
+                                <li><a href="#" class="menu-link">Mahipalpur</a></li>
+                                <li><a href="#" class="menu-link">Indira Gandhi International Airport</a></li>
+                                <li><a href="#" class="menu-link">Saket</a></li>
+                                <li><a href="#" class="menu-link">Lajpat Nagar</a></li>
+                                <li><a href="#" class="menu-link">New Delhi Railway Station</a></li>
+                            </ul>
+                        </li>
+                        <a class="nav-link ps-0" id="all-cty-lnk" href="blog.php">All Cities</a>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -519,18 +437,18 @@
                 <div class="row">
                     <div class="col-12 bkng-form">
                         <div class="row">
-                            <div class="col-md-6 col-12 rsp-mrgn-sm">
+                            <div class="col-md-4 col-6 rsp-mrgn-sm">
                                 <div class="w-100 dstntn">
                                     <label for="destination">Destination</label>
                                     <input type="text" class="form-control" id="destination"
                                         placeholder="Destination Name">
                                 </div>
                             </div>
-                            <div class="col-md-6 col-12 rsp-mrgn-sm">
+                            <div class="col-md-4 col-6 rsp-mrgn-sm">
                                 <div class="w-100 check-in">
                                     <label for="check-in">Check-In Date</label>
                                     <div class="input-group date" id="datepicker-3">
-                                        <input type="text" class="form-control" id="check-in" placeholder="check-in">
+                                        <input type="text" class="form-control" id="check-in" placeholder="Check-In">
                                         <span class="input-group-append">
                                             <span class="input-group-text">
                                                 <i class="fa fa-calendar"></i>
@@ -539,11 +457,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-12">
+                            <div class="col-md-4 col-6">
                                 <div class="w-100 check-out">
                                     <label for="check-out">Check-Out Date</label>
                                     <div class="input-group date" id="datepicker-4">
-                                        <input type="text" class="form-control" id="check-out" placeholder="check-out">
+                                        <input type="text" class="form-control" id="check-out" placeholder="Check-Out">
                                         <span class="input-group-append">
                                             <span class="input-group-text">
                                                 <i class="fa fa-calendar"></i>
@@ -552,7 +470,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-12 rsp-mrgn-md">
+                            <div class="col-md-4 col-6 rsp-mrgn-md">
                                 <div class="w-100 adult-cnt">
                                     <div class="custom-select">
                                         <select>
@@ -566,7 +484,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-6 rsp-mrgn-md">
+                            <div class="col-md-4 col-6 rsp-mrgn-md">
                                 <div class="w-100 adult-cnt">
                                     <div class="custom-select">
                                         <select>
@@ -580,7 +498,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-6 rsp-mrgn-md">
+                            <div class="col-md-4 col-6 rsp-mrgn-md">
                                 <div class="w-100 adult-cnt">
                                     <div class="custom-select">
                                         <select>
@@ -605,48 +523,6 @@
     </section>
     <!-- OFFER SECTION -->
     <section class="ofr">
-        <!-- <div class="container-fluid mt-5 mb-5" id="ofr-sctn">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 ofr-contner">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="image w-100">
-                                <img src="images/ofr-img.png" alt="" class="img-fluid w-100">
-                                <span class="ofr-text">APP EXCLUSIVE OFFER</span>
-                            </div>
-                        </div>
-                        <div class="col-7 txt-bx pt-3 pb-3 ps-4 pe-4 d-flex align-items-center">
-                            <div class="txt w-100">
-                                <div class="row">
-                                    <div class="col-5 txt-prcnt text-center">
-                                        <span>
-                                            Pehli Booking ke
-                                            Liye <br> Karo Pack ,
-                                            Earn 100% OYO Money Cashback.
-                                        </span>
-                                    </div>
-                                    <div class="col-3 on-al d-flex align-items-center justify-content-center">
-                                        <span>
-                                            ON ALL <br> HOTELS
-                                        </span>
-                                    </div>
-                                    <div
-                                        class="col-4 bk-nw d-flex align-items-center justify-content-center position-relative">
-                                        <span>Scan Now</span>
-                                        <span class="spn-2">scan now</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2 qr-cntnr d-flex align-items-center justify-content-end">
-                            <img src="images/qr.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
         <div class="container-fluid p-0 mt-5 mb-5" id="scan-ofr-sec">
             <img src="images/offer.png" alt="" class="img-fluid w-100">
         </div>
@@ -654,9 +530,9 @@
 
     <!-- POPULAR HOTELS SECTION -->
     <div class="container-fluid mb-5" id="pp-hotels">
-        <div class="container position-relative pt-4 pb-4">
+        <div class="container position-relative">
             <div class="row">
-                <div class="col-xl-5 col-lg-5 col-12 content col-city-rsp-2">
+                <div class="col-xl-5 col-lg-5 col-12 content col-city-rsp-2 col-city-rsp-pp">
                     <h3 class="heading">
                         Most Popular Hotels
                     </h3>
@@ -823,11 +699,11 @@
     <div class="container-fluid footer-top">
         <div class="container pt-5 pb-3">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 footer-content">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 footer-content" id="mrgn-bttm-rsp-footer">
                     <h2 class="content-title text-white fs-20 fw-bold">
                         SUPPORT
                     </h2>
-                    <div class="content mt-5">
+                    <div class="content mt-5" id="footer-col-rsp-sm">
                         <a href="#" class="text-white fs-14 footer-links">
                             E-mail: example@gmail.com
                         </a>
@@ -836,11 +712,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-content">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-content" id="mrgn-bttm-rsp-footer">
                     <h2 class="content-title text-white fs-20 fw-bold">
                         MAIN LINKS
                     </h2>
-                    <div class="content mt-5">
+                    <div class="content mt-5" id="footer-col-rsp-sm">
                         <ul class="content-menu flex-column">
                             <li class="footer-links">
                                 <a href="#" class="text-white fs-14">
@@ -876,11 +752,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-content">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-content" id="mrgn-bttm-rsp-footer">
                     <h2 class="content-title text-white fs-20 fw-bold">
                         USEFULL LINKS
                     </h2>
-                    <div class="content mt-5">
+                    <div class="content mt-5" id="footer-col-rsp-sm">
                         <ul class="content-menu flex-column">
                             <li class="footer-links">
                                 <a href="#" class="text-white fs-14">
@@ -915,11 +791,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-content">
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 footer-content" id="mrgn-bttm-rsp-footer">
                     <h2 class="content-title text-white fs-20 fw-bold">
                         OUR HOTELS
                     </h2>
-                    <div class="content mt-5">
+                    <div class="content mt-5" id="footer-col-rsp-sm">
                         <ul class="content-menu flex-column">
                             <li class="footer-links">
                                 <a href="#" class="text-white fs-14">
@@ -958,7 +834,7 @@
                     <h2 class="content-title text-white fs-20 fw-bold">
                         GET IN TOUCH
                     </h2>
-                    <div class="content mt-5">
+                    <div class="content mt-5" id="footer-col-rsp-sm">
                         <ul class="content-menu-icons">
                             <li>
                                 <a href="#" class="text-white fs-15 icons">

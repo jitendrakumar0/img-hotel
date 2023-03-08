@@ -73,8 +73,17 @@
 @mixin col-mrgn-btm-sm{
     .col-city-rsp-2{
         margin-bottom:15px !important;
+       
     }
 }
+@mixin col-mrgn-btm-sm-pp{
+    .col-city-rsp-pp{
+        padding: 0 15px !important;
+        box-shadow:none !important;
+        margin-bottom:20px !important;
+    }
+}
+
 @mixin counter-font-sm(){
     #counter-sec .amnt .counter{
         font-size:$font-sm !important;
@@ -116,5 +125,15 @@
 @mixin mrgn-inputs-sm(){
     .rsp-mrgn-sm{
         margin-bottom:5px;
+    }
+}
+@mixin mrgn-top-footer-col(){
+    #footer-col-rsp-sm{
+        margin-top:20px !important;
+    }
+}
+@mixin mrgn-bottom-footer-col(){
+    #mrgn-bttm-rsp-footer{
+        margin-bottom:10px !important;
     }
 }

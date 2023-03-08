@@ -57,6 +57,8 @@
     @include bkng-block-sm-md();
     @include adult-input-mrgn-top();
     @include mrgn-inputs-sm();
+    @include mrgn-top-footer-col();
+    @include mrgn-bottom-footer-col();
   }
   
   // X-Small devices (portrait phones, less than 576px)
@@ -69,6 +71,9 @@
     @include bkng-block-sm-md();
     @include adult-input-mrgn-top();
     @include mrgn-inputs-sm();
+    @include col-mrgn-btm-sm-pp();
+    @include mrgn-top-footer-col();
+    @include mrgn-bottom-footer-col();
   }
   
   // XX-Large devices (larger desktops)
