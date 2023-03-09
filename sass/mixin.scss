@@ -22,6 +22,13 @@
     -ms-transition:all 1s;
     -o-transition:all 1s;
 }
+@mixin radius-zero(){
+    border-radius:0px !important;
+    -webkit-border-radius:0px !important;
+    -moz-border-radius:0px !important;
+    -ms-border-radius:0px !important;
+    -o-border-radius:0px !important;
+}
 @mixin radius-sm(){
     border-radius:2px;
     -webkit-border-radius:2px;
@@ -135,5 +142,10 @@
 @mixin mrgn-bottom-footer-col(){
     #mrgn-bttm-rsp-footer{
         margin-bottom:10px !important;
+    }
+}
+@mixin ofr-lg-d-none(){
+    .ofr-lg{
+        display:none !important;
     }
 }

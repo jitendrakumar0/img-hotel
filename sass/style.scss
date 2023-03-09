@@ -16,11 +16,11 @@ body {
 
 body::-webkit-scrollbar {
   width: 0.8rem;
-  background-color:$color-white;
+  background-color: $color-white;
 }
 
 body::-webkit-scrollbar-thumb {
-  background:$primary-color;
+  background: $primary-color;
 }
 
 input:focus,
@@ -29,22 +29,27 @@ select:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 input {
   border: none !important;
   width: 100%;
 }
+
 textarea {
   border: none !important;
   width: 100%;
 }
+
 ul {
   display: flex;
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   @include tnsn-first();
@@ -55,6 +60,7 @@ a {
   position: relative;
   overflow: hidden;
   @include tnsn-first();
+
   &:before {
     content: "";
     position: absolute;
@@ -65,6 +71,7 @@ a {
     background-color: $color-btn;
     @include tnsn-first();
   }
+
   &:after {
     content: "";
     position: absolute;
@@ -76,98 +83,118 @@ a {
     @include tnsn-first();
     z-index: 1;
   }
+
   & span {
     position: relative;
     z-index: 2;
   }
+
   &:hover::before {
     left: 0 !important;
   }
+
   &:hover::after {
     right: 0 !important;
   }
 }
+
 // COMMON SELECT
 .custom-select {
   position: relative;
+
   & select {
     display: none;
   }
 }
+
 .select-selected {
-  background-color:$color-white;
-  font-size:$font-extra-sm;
-  padding:10px 12px !important;
+  background-color: $color-white;
+  font-size: $font-extra-sm;
+  padding: 10px 12px !important;
   @include radius-md();
+
   &:after {
     position: absolute;
     content: "";
-    top: 14px;
+    top: 17px;
     right: 10px;
     width: 0;
     height: 0;
-    color:$color-dark;
+    color: $color-dark;
     border: 6px solid transparent;
     border-color: $color-gry transparent transparent transparent;
   }
 }
+
 .select-selected.select-arrow-active:after {
   border-color: $color-gry transparent transparent transparent;
 }
+
 .select-items div,
 .select-selected {
-  color:$color-gry;
-  padding:10px 12px !important;
+  color: $color-gry;
+  padding: 10px 12px !important;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
-  font-size:$font-primary;
+  font-size: $font-primary;
 }
+
 .select-items {
   position: absolute;
-  background-color:$color-white;
+  background-color: $color-white;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
 }
+
 .select-hide {
   display: none;
 }
+
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 // HEADER SECTION
 #myHeader {
   z-index: 99;
 }
+
 #myHeader.sticky {
   top: 0;
   position: fixed;
   z-index: 999;
 }
+
 .header-top {
   background-color: $color-white;
   border-top: 2px solid $primary-color;
   border-bottom: 2px solid $primary-color;
   position: relative;
   z-index: 999;
+
   & .form-container {
     & .form {
       border-right: 2px solid $primary-color;
+
       & input {
         color: $primary-color;
         font-size: $font-primary;
+
         &::placeholder {
           color: $primary-color;
         }
       }
+
       & .input-group-append {
         & .input-group-text {
           background-color: $color-white !important;
           border: none !important;
-          height:100%;
+          height: 100%;
+
           & i {
             color: $primary-color;
           }
@@ -175,22 +202,29 @@ a {
       }
     }
   }
+
   & .guest-amnt {
     border-right: 2px solid $primary-color;
-    & .select-items div, .select-selected{
-      color:$primary-color !important;
+
+    & .select-items div,
+    .select-selected {
+      color: $primary-color !important;
     }
-    & .select-selected:after{
-      top:17px !important;
-      border-color:$primary-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) !important;
+
+    & .select-selected:after {
+      top: 17px !important;
+      border-color: $primary-color rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important;
     }
+
     & .select-selected.select-arrow-active:after {
-      border-color:$primary-color rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) !important;
+      border-color: $primary-color rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) !important;
+    }
   }
-  }
+
   & .srch-lnk {
     border-right: 2px solid $primary-color;
     padding: 2px;
+
     & .lnk {
       & .cmn-btn {
         display: flex;
@@ -202,65 +236,277 @@ a {
       }
     }
   }
+
   & .lgn-snp-lnk {
     & .lnk {
-      & a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $primary-color;
+      & .btn {
         font-size: $font-primary;
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
+        color: $primary-color;
+
         & img {
           max-width: 25px;
-          margin-right: 10px;
+          margin-right: 5px;
+        }
+
+        &:focus {
+          box-shadow: none !important;
+          outline: none !important;
         }
       }
     }
   }
 }
+
 .datepicker-dropdown {
   background-color: $color-white;
 }
+
 .datepicker-days {
   min-width: 200px !important;
   top: 45px !important;
   left: 60px !important;
   padding: 0 20px !important;
 }
+
 .datepicker .datepicker-switch,
 .datepicker td,
 .datepicker th {
   color: $primary-color !important;
   font-weight: lighter !important;
-  font-size:$font-primary;
+  font-size: $font-primary;
 }
+
 .datepicker table tr td.new,
 .datepicker table tr td.old {
   color: $secondary-color-trsp !important;
 }
+
 .datepicker td,
 .datepicker th {
   min-width: 35px !important;
 }
-// .datepicker-dropdown:after{
-//   border-bottom:6px solid $color-dark;
+
+// MODAL SYLING
+#exampleModal,.modal-sm{
+  background: $color-dark-tsnsp;
+  & .modal-content {
+    height: 450px;
+    border: 8px solid $color-gry-trsp;
+    top: 60px !important;
+
+    & #pills-tab {
+      & .nav-item {
+        & .nav-link {
+          color: $primary-color;
+          @include radius-zero();
+          font-size: $font-primary;
+          padding: 15px 0;
+        }
+
+        & .btn-close {
+          top: 8px;
+          right: 10px;
+          background: none !important;
+
+          &::before {
+            content: "\f00d";
+            position: absolute;
+            font-family: 'FONTAWESOME';
+            top: 0;
+            right: 0;
+            background: $color-white;
+            width: 25px;
+            height: 25px;
+            padding: 0 0 2px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include radius-complete();
+          }
+
+          &:focus {
+            box-shadow: none !important;
+            outline: none !important;
+          }
+        }
+      }
+
+      .nav-link.active,
+      .nav-pills .show>.nav-link {
+        background-color: $color-btn;
+        color: $color-white;
+      }
+    }
+
+    & .modal-body {
+      & .modal-title {
+        color: $primary-color;
+        font-family: $fourth-font;
+        font-weight: $font-bold;
+
+        & span {
+          color: $color-btn;
+        }
+      }
+
+      & .lgn-form {
+        & .input {
+          & label {
+            font-size: $font-primary;
+          }
+
+          & input {
+            // border-top:1px solid $color-gry-light !important;
+            // border-right:1px solid $color-gry-light !important;
+            border-bottom: 2px solid $color-gry-trsp !important;
+            border-left: 5px solid $color-btn !important;
+            padding: 10px 10px;
+            @include radius-md();
+            margin-top: 5px;
+          }
+        }
+
+        & .rembr-me {
+          display: flex;
+          align-items: center;
+
+          & label {
+            font-size: $font-primary;
+            margin-left: 5px;
+          }
+
+          & input {
+            border: 1px solid $primary-color !important
+          }
+
+          & .pass-rcvr {
+            margin-left: auto;
+
+            & a {
+              color: $primary-color;
+              font-size: $font-primary;
+              @include tnsn-first();
+
+              &:hover {
+                color: $color-btn;
+              }
+            }
+          }
+        }
+
+        & .cmn-btn {
+          @include cmn-btn();
+          padding: 10px 10px;
+          border-radius: 5px;
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          margin-top: 5px;
+          box-shadow: 0px 0px 5px $color-white;
+
+          &:after {
+            right: -320px;
+          }
+
+          &::before {
+            left: -320px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// LOGIN SECTION MOBILE
+#mobile-lgn {
+  & .lgn-form {
+    & .input {
+      & label {
+        font-size: $font-primary;
+      }
+
+      & input {
+        // border-top:1px solid $color-gry-light !important;
+        // border-right:1px solid $color-gry-light !important;
+        border-bottom: 2px solid $color-gry-trsp !important;
+        border-left: 5px solid $color-btn !important;
+        padding: 10px 10px;
+        @include radius-md();
+        margin-top: 5px;
+      }
+    }
+
+    & .rembr-me {
+      display: flex;
+      align-items: center;
+
+      & label {
+        font-size: $font-primary;
+        margin-left: 5px;
+      }
+
+      & input {
+        border: 1px solid $primary-color !important
+      }
+
+      & .pass-rcvr {
+        margin-left: auto;
+
+        & a {
+          color: $primary-color;
+          font-size: $font-primary;
+          @include tnsn-first();
+
+          &:hover {
+            color: $color-btn;
+          }
+        }
+      }
+    }
+
+    & .cmn-btn {
+      @include cmn-btn();
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+      box-shadow: 0px 0px 5px $color-white;
+
+      &:after {
+        right: -320px;
+      }
+
+      &::before {
+        left: -320px;
+      }
+    }
+  }
+  & .register-lnk{
+    font-size:$font-primary;
+    padding: 0 10px;
+  }
+}
+
 // header bottom
 .header-main {
   background-color: $primary-color;
   padding: 10px 0;
+
   & .navbar-brand {
     color: $color-white;
     font-family: $third-font;
   }
+
   & .nav-item {
     margin: 0 23px;
     position: relative;
+
     & .nav-link {
       font-size: $font-primary !important;
     }
+
     & .deep-menu {
       position: absolute;
       top: 48px;
@@ -274,8 +520,10 @@ a {
       opacity: 0;
       visibility: hidden;
       @include tnsn-first();
+
       & li {
         margin: 5px 0;
+
         & .menu-link {
           color: $primary-color;
           font-size: $font-primary;
@@ -285,13 +533,16 @@ a {
           text-overflow: ellipsis;
           overflow: hidden;
         }
+
         & .menu-link:hover {
           color: $color-btn;
         }
       }
     }
+
     & .nav-drpdn {
       position: relative;
+
       &:before {
         content: "";
         position: absolute;
@@ -302,20 +553,25 @@ a {
       }
     }
   }
+
   & .nav-item:hover .deep-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
   }
+
   & .nav-item:hover .nav-link::before {
     transform: rotate(180deg);
   }
+
   & .nav-link {
     color: $color-white;
   }
+
   & #all-cty-lnk {
     font-size: $font-primary;
     @include tnsn-first();
+
     &:hover {
       color: $color-btn;
     }
@@ -324,64 +580,77 @@ a {
 
 // HEADER MOBILE
 .header-main-mobile {
-  & .btn-canvas{
-    color:$color-white;
-    background:none;
-    border:none;
-    font-size:$font-heading;
+  & .btn-canvas {
+    color: $color-white;
+    background: none;
+    border: none;
+    font-size: $font-heading;
   }
 }
-.offcanvas-start{
-  width:80% !important;
-  & .offcanvas-header{
-    background-color:$primary-color;
-    & .lgn-snp-lnk{
-      color:$color-white;
-      font-size:$font-primary;
-      font-weight:$font-bold;
+
+.offcanvas-start {
+  width: 80% !important;
+
+  & .offcanvas-header {
+    background-color: $primary-color;
+
+    & .lgn-snp-lnk {
+      color: $color-white;
+      font-size: $font-primary;
+      font-weight: $font-bold;
       display: flex;
       align-items: center;
-    }
-    & .btn-close{
       background:none;
-      margin-right:0px;
-      color:$color-white !important;
-      &:focus{
-        box-shadow:none !important;
-        outline:none !important;
+      border:none;
+    }
+
+    & .btn-close {
+      background: none;
+      margin-right: 0px;
+      color: $color-white !important;
+
+      &:focus {
+        box-shadow: none !important;
+        outline: none !important;
       }
     }
   }
-  & .offcanvas-body{
+
+  & .offcanvas-body {
     & #cssmenu {
       width: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
-      & .menu-link{
+
+      & .menu-link {
         display: -webkit-box;
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          max-height: 35px;
-          max-width: 230px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-height: 35px;
+        max-width: 230px;
       }
-      & .cs-list{
+
+      & .cs-list {
         height: 370px;
       }
+
       & ul li {
         position: relative;
         z-index: 9;
-        & a{
+
+        & a {
           padding: 5px 0;
           display: inline-block;
           width: 100%;
-          color:$primary-color;
+          color: $primary-color;
           text-transform: capitalize;
-          font-size:$font-primary;
-          font-weight:$font-bold;
+          font-size: $font-primary;
+          font-weight: $font-bold;
         }
       }
+
       & ul .has-sub:before {
         content: '';
         display: block;
@@ -394,50 +663,59 @@ a {
         transition: all .5s;
         font-size: 14px;
         z-index: -1;
-    }
+      }
+
       & ul .has-sub:after {
         content: '';
         display: block;
         position: absolute;
         top: 19px;
-    right: 13px;
-    background-color: #cf2e2e;
-    height: 12px;
-    width: 2px;
-    transition: all .5s;
-    z-index: -1;
-}
+        right: 13px;
+        background-color: #cf2e2e;
+        height: 12px;
+        width: 2px;
+        transition: all .5s;
+        z-index: -1;
+      }
+
       & ul .open:before {
         transform: rotate(45deg);
       }
+
       & ul .open:after {
         transform: rotate(45deg);
       }
     }
-    & .nav-link{
-      color:$primary-color;
-      font-size:$font-primary;
-      font-weight:$font-bold;
-      &:hover{
-        color:$color-btn;
+
+    & .nav-link {
+      color: $primary-color;
+      font-size: $font-primary;
+      font-weight: $font-bold;
+
+      &:hover {
+        color: $color-btn;
       }
     }
   }
 }
-  
+
 // BOOKING SECTION
 #bkng-section {
   position: relative;
+
   & .owl-dots {
     display: none;
   }
+
   & .owl-nav {
     display: block !important;
+
     & .owl-prev {
       position: absolute;
       top: 50%;
       left: 0;
       visibility: hidden;
+
       & span::before {
         content: "";
         position: absolute;
@@ -452,11 +730,13 @@ a {
         color: $color-white;
       }
     }
+
     & .owl-next {
       position: absolute;
       top: 50%;
       right: 0;
       visibility: hidden;
+
       & span::before {
         content: "\f105";
         position: absolute;
@@ -472,8 +752,10 @@ a {
       }
     }
   }
+
   & .item {
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -484,14 +766,17 @@ a {
       background-color: #0000005d;
       z-index: 2;
     }
+
     & img {
       position: relative;
     }
+
     & .content {
       position: absolute;
       bottom: 15%;
       left: 30%;
       z-index: 4;
+
       & .heading-cntnt {
         color: $color-fourth;
         font-size: $font-big;
@@ -499,6 +784,7 @@ a {
         font-weight: $font-bold;
         letter-spacing: 5px;
       }
+
       & .para-cntnt {
         color: $color-fourth;
         font-size: $font-big;
@@ -518,30 +804,36 @@ a {
   background-position: center;
   background-size: cover;
   padding: 30px 0;
+
   & .bkng-form {
     background-color: $primary-color-trsp;
     padding: 15px 15px;
     @include radius-md();
+
     & .dstntn {
       & label {
         font-size: $font-primary;
         color: $color-white;
       }
+
       & input {
         font-size: $font-extra-sm;
-        padding:10px 12px;
+        padding: 10px 12px;
       }
     }
+
     & .check-in,
     .check-out {
       & label {
         font-size: $font-primary;
         color: $color-white;
       }
+
       & input {
         font-size: $font-extra-sm;
-        padding:10px 12px;
+        padding: 10px 12px;
       }
+
       & .input-group-append {
         & .input-group-text {
           border: none !important;
@@ -549,57 +841,128 @@ a {
           height: 100% !important;
           border-top-left-radius: 0px;
           border-bottom-left-radius: 0px;
+
           & i {
             color: $primary-color;
           }
         }
       }
     }
-    & .cmn-btn{
+
+    & .cmn-btn {
       @include cmn-btn();
       padding: 10px 20px;
       border-radius: 5px;
       display: inline-block;
-      width:100%;
+      width: 100%;
       text-align: center;
       margin-top: 5px;
       box-shadow: 0px 0px 5px $color-white;
-      &:after{
-        right:-320px;
+
+      &:after {
+        right: -320px;
       }
-      &::before{
-        left:-320px;
+
+      &::before {
+        left: -320px;
       }
     }
   }
 }
 
 // OFFER SECTION
-#scan-ofr-sec{
+.ofr-lg{
   background-color: $primary-color;
-  & img{
+  & img {
     box-shadow: 0px 0px 8px $color-dark;
+  }
+}
+// OFFER SECTION-SM
+#scan-ofr-sec {
+  background-color: $primary-color;
+  box-shadow: 0px 0px 8px $color-dark;
+  & .ofr-image{
+    position:relative;
+    & img{
+      @include radius-md();
+      box-shadow: 0px 0px 8px $color-dark;
+    }
+  }
+  & .ofr-detail{
+    color:$color-white;
+    font-size:$font-primary;
+    font-family:$fourth-font;
+    font-weight:$font-bold;
+    display:flex;
+    align-items:center;
+  }
+  & .on-al{
+    color:$color-white;
+    font-size:$font-heading;
+    font-family:$third-font;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-weight:$font-bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & .scan-now{
+    position:relative;
+    & .scan{
+      background:$color-white;
+      font-size: 14px;
+      width: 100%;
+      color:$primary-color;
+      height: 80px;
+      display: flex;
+      font-weight:$font-bold;
+      align-items: center;
+      justify-content: center;
+      @include radius-md();
+      position:relative;
+    }
+    & .scan-2{
+      background:$color-white;
+      font-size: 14px;
+      width: 100%;
+      color:$primary-color;
+      height: 80px;
+      display: flex;
+      font-weight:$font-bold;
+      align-items: center;
+      justify-content: center;
+      @include radius-md();
+      position: absolute;
+      top: -5px;
+      left: 5px;
+    box-shadow: 0px 0px 8px $color-dark;
+    }
   }
 }
 // POPULAR HOTELS SECTION
 #pp-hotels {
-   background-color:$primary-color;
+  background-color: $primary-color;
   position: relative;
   padding: 35px 0 35px 0;
   box-shadow: 0px 0px 8px $color-dark;
+
   & .content {
     padding: 40px 20px;
     box-shadow: 0px 0px 8px $color-dark;
     @include radius-big();
+
     & .heading {
       color: $color-white;
       font-size: $font-sm;
       font-weight: $font-bold;
     }
+
     & .para {
       color: $color-white;
       font-size: $font-extra-sm;
     }
+
     & .cmn-btn {
       @include cmn-btn();
       padding: 10px 20px;
@@ -609,17 +972,21 @@ a {
       box-shadow: 0px 0px 5px $color-white;
     }
   }
+
   & .carousel-pp {
     & .owl-dots {
       display: none;
     }
+
     & .owl-nav {
       display: block !important;
+
       & .owl-prev {
         position: absolute;
         top: 50%;
         left: 0;
         visibility: hidden;
+
         & span::before {
           content: "";
           position: absolute;
@@ -634,11 +1001,13 @@ a {
           color: $color-white;
         }
       }
+
       & .owl-next {
         position: absolute;
         top: 50%;
         right: 0;
         visibility: hidden;
+
         & span::before {
           content: "\f105";
           position: absolute;
@@ -654,6 +1023,7 @@ a {
         }
       }
     }
+
     & .item {
       & img {
         @include radius-big();
@@ -661,12 +1031,14 @@ a {
         position: relative;
         filter: brightness(0.9);
       }
+
       & .content {
         position: absolute;
         bottom: 10px;
         width: 100%;
         padding: 0 15px;
-        box-shadow:none;
+        box-shadow: none;
+
         & .name,
         .address {
           color: $color-white;
@@ -674,14 +1046,17 @@ a {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+
           & i {
             color: $primary-color;
           }
         }
+
         & .address {
           margin-left: 30px !important;
         }
       }
+
       & .dscnt {
         position: absolute;
         top: 20px;
@@ -704,13 +1079,16 @@ a {
     @include radius-big();
     position: relative;
     height: 230px;
+
     & img {
       @include tnsn-first();
       filter: brightness(0.5);
+
       &:hover {
         transform: scale(1.1);
       }
     }
+
     & .htl-cnt {
       position: absolute;
       top: 20px;
@@ -721,16 +1099,19 @@ a {
       font-size: $font-extra-sm;
       @include radius-sm();
     }
+
     & .content {
       position: absolute;
       bottom: 0;
       left: 0;
       padding: 0 20px;
+
       & .cty {
         color: $color-white;
         font-size: $font-primary;
         font-weight: $font-bold;
       }
+
       & .para {
         color: $color-white;
         font-size: $font-extra-sm;
@@ -742,29 +1123,34 @@ a {
 // COUNTER SECTION
 #counter-sec {
   padding: 30px 0;
-  background-color:$primary-color;
+  background-color: $primary-color;
   box-shadow: 0px 0px 8px $color-dark;
+
   & .amnt {
     padding: 18px 15px;
     @include radius-big();
     height: 150px;
     @include tnsn-first();
     box-shadow: 0px 0px 8px $color-dark;
+
     &:hover {
       box-shadow: 0px 0px 8px $color-white;
     }
+
     & .icon {
       & i {
         color: $color-white;
         font-size: $font-sm;
       }
     }
+
     & .counter {
       color: $color-white;
       font-size: $font-med;
       font-family: $fourth-font;
       font-weight: $font-bold;
     }
+
     & .title {
       color: $color-white;
       font-size: $font-primary;
@@ -780,6 +1166,7 @@ a {
   background-size: cover;
   position: relative;
   padding: 35px 0 35px 0;
+  box-shadow: 0px 0px 8px $color-dark;
   &::before {
     content: "";
     position: absolute;
@@ -789,6 +1176,7 @@ a {
     height: 100%;
     background-color: $color-dark-tsnsp;
   }
+
   & .head {
     & .heading {
       color: $color-white;
@@ -796,10 +1184,12 @@ a {
       font-weight: $font-bold;
     }
   }
+
   & .para {
     color: $color-white;
     font-size: $font-extra-sm;
   }
+
   & .cmn-btn {
     @include cmn-btn();
     padding: 10px 20px;
@@ -814,9 +1204,11 @@ a {
 // footer-top
 .footer-top {
   background: $color-gry;
+
   & .content-title {
     position: relative;
   }
+
   & .content-title::before {
     content: "";
     position: absolute;
@@ -826,12 +1218,15 @@ a {
     height: 5px;
     bottom: -15px;
   }
+
   & .content a {
     display: block;
     margin-bottom: 12px;
   }
+
   & .content-menu-icons li {
     margin-right: 10px;
+
     & .icons {
       background: $color-btn;
       border-radius: 25px;
@@ -840,13 +1235,16 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
+
       &:hover {
         @include radius-sm();
       }
     }
   }
+
   & .footer-links {
     @include tnsn-first();
+
     & :hover {
       transform: translateX(5px) !important;
       -webkit-transform: translateX(5px) !important;
@@ -860,12 +1258,15 @@ a {
 // copyright
 #copyright-sec {
   background: $primary-color;
+
   & .dev-by {
     font-size: $font-extra-sm;
+
     & a {
       & span b {
         @include tnsn-first();
       }
+
       & :hover {
         color: $color-btn !important;
       }

@@ -215,11 +215,11 @@ document.addEventListener("click", closeAllSelect);
 
 // OFFCANVAS
 
-(function($) {
-    $(document).ready(function() {
+(function ($) {
+    $(document).ready(function () {
 
         $('#cssmenu li.active').addClass('open').children('ul').show();
-        $('#cssmenu li.has-sub>a').on('click', function() {
+        $('#cssmenu li.has-sub>a').on('click', function () {
             $(this).removeAttr('href');
             var element = $(this).parent('li');
             if (element.hasClass('open')) {
