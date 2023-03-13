@@ -238,3 +238,40 @@ document.addEventListener("click", closeAllSelect);
 
     });
 })(jQuery);
+
+// INPUT PILLS + -
+const incrementButton = document.querySelector("#increment");
+const decrementButton = document.querySelector("#decrement");
+const quantityInput = document.querySelector("#quantity");
+
+incrementButton.addEventListener("click", () => {
+  quantityInput.value = parseInt(quantityInput.value) + 1;
+});
+decrementButton.addEventListener("click", () => {
+  quantityInput.value = parseInt(quantityInput.value) - 1;
+});
+
+
+const incrementButtons = document.querySelector("#increment-1");
+const decrementButtons = document.querySelector("#decrement-1");
+const quantityInputs = document.querySelector("#quantity-1");
+
+incrementButtons.addEventListener("click", () => {
+  quantityInputs.value = parseInt(quantityInputs.value) + 1;
+});
+decrementButtons.addEventListener("click", () => {
+  quantityInputs.value = parseInt(quantityInputs.value) - 1;
+});
+
+
+const incrementButtonss = document.querySelector("#increment-2");
+const decrementButtonss = document.querySelector("#decrement-2");
+const quantityInputss = document.querySelector("#quantity-2");
+
+incrementButtonss.addEventListener("click", () => {
+  quantityInputss.value = parseInt(quantityInputss.value) + 1;
+});
+decrementButtonss.addEventListener("click", () => {
+  quantityInputss.value = parseInt(quantityInputss.value) - 1;
+});
+

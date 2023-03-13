@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/css/owl.carousel.css">
     <link rel="stylesheet" href="css/css/custom.css">
     <link rel="stylesheet" href="css/css/style.min.css">
+    <link rel="stylesheet" href="css/css/listing.min.css">
 </head>
 
 <body>
@@ -476,11 +477,498 @@
         </div>
     </div>
     <!-- LISTING SECTION -->
-    <div class="container-fluid" id="listing-sec">
-        <div class="container">
+    <!-- BREADCRUMBS -->
+    <div class="container-fluid" id="breadcrumb">
+        <div class="container position-relative">
             <div class="row">
-                <div class="col-3">
-                    
+                <div class="col-12 breadcrumbs">
+                    <nav aria-label="breadcrumb" class="h-100">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="" class="">Home</a>
+                            </li>
+                            <span class="devider"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="" class="">Listings</a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="listing-sec">
+        <div class="container pt-4 pb-4">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-12 options-part h-100">
+                    <h3 class="heading">Fill The Details</h3>
+                    <div class="w-100">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="check-in">
+                                    <label for="check-in">CHECK-IN DATE</label>
+                                    <div class="input-group date" id="datepicker-3">
+                                        <input type="text" class="form-control" id="check-in" placeholder="Check-In">
+                                        <span class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="check-out">
+                                    <label for="check-out">CHECK-OUT DATE</label>
+                                    <div class="input-group date" id="datepicker-4">
+                                        <input type="text" class="form-control" id="check-out" placeholder="Check-Out">
+                                        <span class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 input-pill mt-3 d-flex">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="rooms">
+                                        <label for="quantity">ROOMS</label>
+                                        <span class="input-wrapper d-flex">
+                                            <div>
+                                                <input class="h-100" value="1" id="quantity" />
+                                            </div>
+                                            <div>
+                                                <div class="w-100">
+                                                    <button id="increment">+</button>
+                                                </div>
+                                                <div class="w-100">
+                                                    <button id="decrement">-</button>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="rooms">
+                                        <label for="quantity-1">ADULTS</label>
+                                        <span class="input-wrapper d-flex">
+                                            <div>
+                                                <input class="h-100" value="1" id="quantity-1" />
+                                            </div>
+                                            <div>
+                                                <div class="w-100">
+                                                    <button id="increment-1">+</button>
+                                                </div>
+                                                <div class="w-100">
+                                                    <button id="decrement-1">-</button>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="rooms">
+                                        <label for="quantity-2">CHILDREN</label>
+                                        <span class="input-wrapper d-flex">
+                                            <div>
+                                                <input class="h-100" value="1" id="quantity-2" />
+                                            </div>
+                                            <div>
+                                                <div class="w-100">
+                                                    <button id="increment-2">+</button>
+                                                </div>
+                                                <div class="w-100">
+                                                    <button id="decrement-2">-</button>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="star-ratings w-100 mt-3">
+                        <h3 class="heading">Star Ratings</h3>
+                        <ul class="ratings-menu flex-column">
+                            <li>
+                                <input class="form-check-input" type="checkbox" value="" id="5star">
+                                <label for="5star">
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <span>5 Stars</span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" value="" id="4star">
+                                <label for="4star">
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <span>4 Stars</span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li>
+                                <input class="form-check-input" type="checkbox" value="" id="3star">
+                                <label for="3star">
+                                    <span class="stars">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <span>3 Stars</span>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="facilities w-100 mt-3">
+                        <h3 class="heading">Facility</h3>
+                        <div class="d-flex">
+                            <ul class="facility-menu flex-column">
+                                <li>
+                                    <input class="form-check-input" type="checkbox" value="" id="5star">
+                                    <label for="5star">
+                                        <span class="facility">
+                                            FREE WIFI
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" value="" id="4star">
+                                    <label for="4star">
+                                        <span class="facility">
+                                            AIR CONDITIONING
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" value="" id="3star">
+                                    <label for="3star">
+                                        <span class="facility">
+                                            PARKING
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <ul class="facility-menu ms-auto flex-column">
+                                <li>
+                                    <input class="form-check-input" type="checkbox" value="" id="5star">
+                                    <label for="5star">
+                                        <span class="facility">
+                                            FREE WIFI
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" value="" id="4star">
+                                    <label for="4star">
+                                        <span class="facility">
+                                            AIR CONDITIONING
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input class="form-check-input" type="checkbox" value="" id="3star">
+                                    <label for="3star">
+                                        <span class="facility">
+                                            PARKING
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="srch-btn w-100 mt-3">
+                        <a href="#" class="cmn-btn"><span>Search</span></a>
+                    </div>
+                </div>
+                <div class="col-8 hotels-part">
+                    <h3 class="heading">Results For : <span>This City</span></h3>
+                    <div class="row">
+                        <div class="col-12 hotel-contnr mb-3">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="image">
+                                        <img src="images/list-hotel1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-7 contnt">
+                                    <div class="name mb-1">
+                                        <a href="#">Premium Plaza Hotel</a>
+                                    </div>
+                                    <div class="address mb-3">
+                                        <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            27th Street,Hope circus,Alwar,Rajasthan</a>
+                                    </div>
+                                    <div class="para mb-3">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+                                    </div>
+                                    <div class="facilities mb-3">
+                                        <ul class="menu">
+                                            <li><i class="fa fa-wifi" aria-hidden="true">
+                                                    <span>Free Wifi</span>
+                                                </i></li>
+                                            <li><i class="fa fa-car" aria-hidden="true">
+                                                    <span>Parking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-magic" aria-hidden="true">
+                                                    <span>No Smoking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-cutlery" aria-hidden="true">
+                                                    <span>Restaurant</span>
+                                                </i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-100 d-flex">
+                                        <div class="rent">
+                                            RENT/NIGHT <span><i class="fa fa-inr" aria-hidden="true"></i>300</span>
+                                        </div>
+                                        <div class="actions ms-auto">
+                                            <a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                <span>Find Directions</span></a>
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                <span>Save</span></a>
+                                            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>On the Map</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 hotel-contnr mb-3">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="image">
+                                        <img src="images/list-hotel1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-7 contnt">
+                                    <div class="name mb-1">
+                                        <a href="#">Premium Plaza Hotel</a>
+                                    </div>
+                                    <div class="address mb-3">
+                                        <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            27th Street,Hope circus,Alwar,Rajasthan</a>
+                                    </div>
+                                    <div class="para mb-3">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+                                    </div>
+                                    <div class="facilities mb-3">
+                                        <ul class="menu">
+                                            <li><i class="fa fa-wifi" aria-hidden="true">
+                                                    <span>Free Wifi</span>
+                                                </i></li>
+                                            <li><i class="fa fa-car" aria-hidden="true">
+                                                    <span>Parking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-magic" aria-hidden="true">
+                                                    <span>No Smoking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-cutlery" aria-hidden="true">
+                                                    <span>Restaurant</span>
+                                                </i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-100 d-flex">
+                                        <div class="rent">
+                                            RENT/NIGHT <span><i class="fa fa-inr" aria-hidden="true"></i>300</span>
+                                        </div>
+                                        <div class="actions ms-auto">
+                                            <a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                <span>Find Directions</span></a>
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                <span>Save</span></a>
+                                            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>On the Map</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 hotel-contnr mb-3">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="image">
+                                        <img src="images/list-hotel1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-7 contnt">
+                                    <div class="name mb-1">
+                                        <a href="#">Premium Plaza Hotel</a>
+                                    </div>
+                                    <div class="address mb-3">
+                                        <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            27th Street,Hope circus,Alwar,Rajasthan</a>
+                                    </div>
+                                    <div class="para mb-3">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+                                    </div>
+                                    <div class="facilities mb-3">
+                                        <ul class="menu">
+                                            <li><i class="fa fa-wifi" aria-hidden="true">
+                                                    <span>Free Wifi</span>
+                                                </i></li>
+                                            <li><i class="fa fa-car" aria-hidden="true">
+                                                    <span>Parking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-magic" aria-hidden="true">
+                                                    <span>No Smoking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-cutlery" aria-hidden="true">
+                                                    <span>Restaurant</span>
+                                                </i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-100 d-flex">
+                                        <div class="rent">
+                                            RENT/NIGHT <span><i class="fa fa-inr" aria-hidden="true"></i>300</span>
+                                        </div>
+                                        <div class="actions ms-auto">
+                                            <a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                <span>Find Directions</span></a>
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                <span>Save</span></a>
+                                            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>On the Map</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 hotel-contnr mb-3">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="image">
+                                        <img src="images/list-hotel1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-7 contnt">
+                                    <div class="name mb-1">
+                                        <a href="#">Premium Plaza Hotel</a>
+                                    </div>
+                                    <div class="address mb-3">
+                                        <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            27th Street,Hope circus,Alwar,Rajasthan</a>
+                                    </div>
+                                    <div class="para mb-3">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+                                    </div>
+                                    <div class="facilities mb-3">
+                                        <ul class="menu">
+                                            <li><i class="fa fa-wifi" aria-hidden="true">
+                                                    <span>Free Wifi</span>
+                                                </i></li>
+                                            <li><i class="fa fa-car" aria-hidden="true">
+                                                    <span>Parking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-magic" aria-hidden="true">
+                                                    <span>No Smoking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-cutlery" aria-hidden="true">
+                                                    <span>Restaurant</span>
+                                                </i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-100 d-flex">
+                                        <div class="rent">
+                                            RENT/NIGHT <span><i class="fa fa-inr" aria-hidden="true"></i>300</span>
+                                        </div>
+                                        <div class="actions ms-auto">
+                                            <a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                <span>Find Directions</span></a>
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                <span>Save</span></a>
+                                            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>On the Map</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 hotel-contnr mb-3">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="image">
+                                        <img src="images/list-hotel1.png" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="col-7 contnt">
+                                    <div class="name mb-1">
+                                        <a href="#">Premium Plaza Hotel</a>
+                                    </div>
+                                    <div class="address mb-3">
+                                        <a href="#"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                            27th Street,Hope circus,Alwar,Rajasthan</a>
+                                    </div>
+                                    <div class="para mb-3">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+                                    </div>
+                                    <div class="facilities mb-3">
+                                        <ul class="menu">
+                                            <li><i class="fa fa-wifi" aria-hidden="true">
+                                                    <span>Free Wifi</span>
+                                                </i></li>
+                                            <li><i class="fa fa-car" aria-hidden="true">
+                                                    <span>Parking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-magic" aria-hidden="true">
+                                                    <span>No Smoking</span>
+                                                </i></li>
+                                            <li><i class="fa fa-cutlery" aria-hidden="true">
+                                                    <span>Restaurant</span>
+                                                </i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-100 d-flex">
+                                        <div class="rent">
+                                            RENT/NIGHT <span><i class="fa fa-inr" aria-hidden="true"></i>300</span>
+                                        </div>
+                                        <div class="actions ms-auto">
+                                            <a href="#"><i class="fa fa-exchange" aria-hidden="true"></i>
+                                                <span>Find Directions</span></a>
+                                            <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                                                <span>Save</span></a>
+                                            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                <span>On the Map</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-4">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
