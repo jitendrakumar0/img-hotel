@@ -6,7 +6,7 @@
 
 #breadcrumb {
     background-color: $color-white;
-    padding: 10px 0;
+    padding: 5px 0 10px 0;
 
     & ol {
         height: 100%;
@@ -19,10 +19,13 @@
 
             & a {
                 font-size: $font-primary;
+                color:$primary-color;
+                font-weight:$font-bold;
             }
 
             & i {
                 font-weight: $font-bold;
+                color:$color-btn;
             }
         }
     }
@@ -48,7 +51,7 @@
         & .check-in,
         .check-out {
             & label {
-                font-size: $font-primary;
+                font-size: $font-extra-sm;
                 color: $color-gry;
                 margin-bottom: 5px;
             }
@@ -60,6 +63,11 @@
                     border-left: 5px solid $color-btn !important;
                     border-top: 2px solid $color-gry !important;
                     border-bottom: 2px solid $color-gry !important;
+                    background-color:$primary-color;
+                    color:$color-white;
+                    &::placeholder{
+                        color:$color-white;
+                    }
                 }
 
                 & .input-group-append {
@@ -85,7 +93,7 @@
                 text-align: center;
 
                 & label {
-                    font-size: $font-primary;
+                    font-size: $font-extra-sm;
                     color: $color-gry;
                     margin-bottom: 5px;
                     width: 100%;
@@ -93,30 +101,44 @@
                 }
 
                 .input-wrapper {
-                    outline:1px solid $color-gry;
+                    outline: 1px solid $color-gry;
                     @include radius-sm();
                     display: inline-block;
                     width: 100%;
-                    font-size:$font-extra-sm;
-                    & input{
-                        text-align:center;
+                    font-size: $font-extra-sm;
+
+                    & input {
+                        text-align: center;
+                    }
+                    & .incrmt{
+                        border-left:1px solid $color-gry;
+                        border-bottom:1px solid $color-gry;
+                    }
+                    & .dcrmt{
+                        border-left:1px solid $color-gry;
                     }
                 }
+
                 .input-wrapper * {
                     border: none;
                 }
+
                 .input-wrapper button:first-child {
                     width: 100%;
-                    font-size:$font-extra-sm;
-                    width:50px;
-                    padding:0 !important;
+                    font-size: $font-extra-sm;
+                    width: 50px;
+                    padding: 0 !important;
+                    color:$color-white;
+                    background:$primary-color;
                 }
 
                 .input-wrapper button:last-child {
                     width: 100%;
-                    font-size:$font-extra-sm;
-                    width:50px;
-                    padding:0 !important;
+                    font-size: $font-extra-sm;
+                    width: 50px;
+                    padding: 0 !important;
+                    color:$color-white;
+                    background:$primary-color;
                 }
             }
         }
@@ -141,19 +163,19 @@
                 }
 
                 & .facility {
-                    font-size: $font-primary;
+                    font-size: $font-extra-sm;
                     color: $color-gry;
                 }
 
                 & label {
                     & .stars {
                         & i {
-                            font-size: $font-primary;
+                            font-size: $font-extra-sm;
                             color: $color-rating;
                         }
 
                         & span {
-                            font-size: $font-primary;
+                            font-size: $font-extra-sm;
                             margin-left: 5px;
                             color: $color-gry;
                         }
@@ -200,15 +222,81 @@
             & .image {
                 overflow: hidden;
                 @include radius-md();
+                position: relative;
 
                 & img {
                     @include radius-md();
                     @include tnsn-first();
+                    filter: brightness(0.8);
+                }
+
+                & .sale {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    padding: 1px 10px;
+                    @include radius-sm();
+                    font-size: $font-extra-sm;
+                    background: $primary-color;
+                    color: $color-white;
+                }
+
+                & .stars {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+
+                    & ul {
+                        & li {
+                            margin-right: 4px;
+
+                            & i {
+                                color: $color-rating;
+                                font-size: $font-extra-sm;
+                            }
+                        }
+                    }
+                }
+
+                & .htl-reviews {
+                    position: absolute;
+                    bottom: 10px;
+                    left:0;
+                    padding:0 5px;
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & span{
+                        margin-right:8px;
+                    }
+                    & .review-amnt,
+                    .quality {
+                        color: $color-white;
+                        font-size: $font-extra-sm;
+                    }
+
+                    & .rating {
+                        color: $color-white;
+                        font-size: $font-extra-sm;
+                        background: $primary-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30px;
+                        width: 35px;
+                        outline:3px solid $color-gry-trsp;
+                        @include radius-sm();
+                    }
                 }
             }
 
             & .contnt {
-                & .name {}
+                & .name {
+                    & a {
+                        font-size: $font-heading;
+                    }
+                }
 
                 & .address {
                     padding-bottom: 10px;
