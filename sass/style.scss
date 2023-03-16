@@ -122,17 +122,17 @@ a {
   font-size: $font-extra-sm;
   padding: 10px 12px !important;
   @include radius-md();
-
-  &:after {
+  &:after{
+    display:none;
+  }
+  &::before{
     position: absolute;
-    content: "";
-    top: 17px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    color: $color-dark;
-    border: 6px solid transparent;
-    border-color: $color-gry transparent transparent transparent;
+    content: "\f107";
+    font-family:'FONTAWESOME';
+    top:8px;
+    right:20px;
+    font-size:$font-secondary;
+    font-weight:$font-bold;
   }
 }
 
@@ -1269,13 +1269,8 @@ a {
 
   & .footer-links {
     @include tnsn-first();
-
-    & :hover {
-      transform: translateX(5px) !important;
-      -webkit-transform: translateX(5px) !important;
-      -moz-transform: translateX(5px) !important;
-      -ms-transform: translateX(5px) !important;
-      -o-transform: translateX(5px) !important;
+    &:hover {
+      @include trnsform-trslatx();
     }
   }
 }

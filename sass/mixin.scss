@@ -29,6 +29,13 @@
     -ms-transform:translateY(-5px);
     -o-transform:translateY(-5px);
 }
+@mixin trnsform-trslatx(){
+    transform:translateX(5px);
+    -webkit-transform:translateX(5px);
+    -moz-transform:translateX(5px);
+    -ms-transform:translateX(5px);
+    -o-transform:translateX(5px);
+}
 @mixin trnsform-scale(){
     transform:scale(1.1);
     -webkit-transform:scale(1.1);

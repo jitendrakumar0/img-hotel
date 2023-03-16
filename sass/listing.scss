@@ -8,25 +8,63 @@
     background-color: $color-white;
     padding: 5px 0 10px 0;
 
-    & ol {
-        height: 100%;
-        display: flex;
-        align-items: center;
+    & .breadcrumbs {
+        & ol {
+            height: 100%;
+            display: flex;
+            align-items: center;
 
-        & .breadcrumb-item,
-        .devider {
-            margin-right: 10px;
+            & .breadcrumb-item,
+            .devider {
+                margin-right: 10px;
 
-            & a {
-                font-size: $font-primary;
-                color:$primary-color;
-                font-weight:$font-bold;
+                & a {
+                    font-size: $font-primary;
+                    color: $primary-color;
+                    font-weight: $font-bold;
+                }
+
+                & i {
+                    font-weight: $font-bold;
+                    color: $color-btn;
+                }
             }
-
-            & i {
-                font-weight: $font-bold;
-                color:$color-btn;
+        }
+    }
+    & .selector{
+        & .custom-select{
+            width:200px;
+            margin-left: auto;
+            background-color:$color-btn !important;
+            @include radius-sm();
+            
+        }
+        & .select-items div, .select-selected{
+            color:$color-white;
+            font-size:$font-extra-sm;
+        }
+        & .select-selected{
+            background:none;
+            margin-left:25px;
+            font-size:$font-extra-sm;
+            &::after{
+                position:absolute;
+                content:"\f0c9";
+                font-family:'FONTAWESOME';
+                top:11px;
+                left: 0;
+                display:block !important;
+                margin-left:18px;
             }
+        }
+        & .select-items{
+            background-color:$color-btn;
+        }
+        & .srt-by{
+            color:$primary-color;
+            font-size:$font-primary;
+            margin-right:10px;
+            font-weight:$font-bold;
         }
     }
 }
@@ -39,13 +77,14 @@
         background-color: $color-white;
         padding: 15px 15px;
         @include radius-md();
-        box-shadow: 0px 0px 3px $color-gry-light;
+        box-shadow: 0px 0px 5px $color-gry;
         position: sticky;
         top: 0;
 
         & .heading {
-            color: $color-dark;
-            font-size: $font-heading ;
+            color: $primary-color;
+            font-size: $font-secondary;
+            font-weight: $font-bold;
         }
 
         & .check-in,
@@ -54,19 +93,22 @@
                 font-size: $font-extra-sm;
                 color: $color-gry;
                 margin-bottom: 5px;
+                font-family: $fourth-font;
+                font-weight: $font-bold;
             }
 
             & .input-group {
                 & input {
                     font-size: $font-extra-sm;
                     padding: 10px 12px;
-                    border-left: 5px solid $color-btn !important;
+                    border-left: 5px solid $primary-color !important;
                     border-top: 2px solid $color-gry !important;
                     border-bottom: 2px solid $color-gry !important;
-                    background-color:$primary-color;
-                    color:$color-white;
-                    &::placeholder{
-                        color:$color-white;
+                    background-color: $color-btn;
+                    color: $color-white;
+
+                    &::placeholder {
+                        color: $color-white;
                     }
                 }
 
@@ -98,10 +140,12 @@
                     margin-bottom: 5px;
                     width: 100%;
                     text-align: left;
+                    font-family: $fourth-font;
+                    font-weight: $font-bold;
                 }
 
                 .input-wrapper {
-                    outline: 1px solid $color-gry;
+                    outline:2px solid $color-gry;
                     @include radius-sm();
                     display: inline-block;
                     width: 100%;
@@ -110,12 +154,14 @@
                     & input {
                         text-align: center;
                     }
-                    & .incrmt{
-                        border-left:1px solid $color-gry;
-                        border-bottom:1px solid $color-gry;
+
+                    & .incrmt {
+                        border-left: 1px solid $color-gry;
+                        border-bottom: 1px solid $color-gry;
                     }
-                    & .dcrmt{
-                        border-left:1px solid $color-gry;
+
+                    & .dcrmt {
+                        border-left: 1px solid $color-gry;
                     }
                 }
 
@@ -128,8 +174,8 @@
                     font-size: $font-extra-sm;
                     width: 50px;
                     padding: 0 !important;
-                    color:$color-white;
-                    background:$primary-color;
+                    color: $color-white;
+                    background: $color-btn;
                 }
 
                 .input-wrapper button:last-child {
@@ -137,8 +183,8 @@
                     font-size: $font-extra-sm;
                     width: 50px;
                     padding: 0 !important;
-                    color:$color-white;
-                    background:$primary-color;
+                    color: $color-white;
+                    background: $color-btn;
                 }
             }
         }
@@ -146,8 +192,9 @@
         & .star-ratings,
         .facilities {
             & .heading {
-                color: $color-dark;
-                font-size: $font-heading ;
+                color: $primary-color;
+                font-size: $font-secondary;
+                font-weight: $font-bold;
             }
 
             & .ratings-menu,
@@ -168,6 +215,9 @@
                 }
 
                 & label {
+                    font-family: $fourth-font;
+                    font-weight: $font-bold;
+
                     & .stars {
                         & i {
                             font-size: $font-extra-sm;
@@ -178,6 +228,8 @@
                             font-size: $font-extra-sm;
                             margin-left: 5px;
                             color: $color-gry;
+                            font-family: $fourth-font;
+                            font-weight: $font-bold;
                         }
                     }
                 }
@@ -203,10 +255,11 @@
 
         & .heading {
             color: $color-gry;
-            font-size: $font-heading ;
+            font-size: $font-secondary;
 
             & span {
-                color: $color-btn;
+                color: $primary-color;
+                font-weight: $font-bold;
             }
 
             border-bottom:1px solid $color-gry-light;
@@ -217,7 +270,7 @@
             background-color: $color-white;
             padding: 15px 15px;
             @include radius-md();
-            box-shadow: 0px 0px 3px $color-gry-light;
+            box-shadow: 0px 0px 5px $color-gry;
 
             & .image {
                 overflow: hidden;
@@ -261,19 +314,22 @@
                 & .htl-reviews {
                     position: absolute;
                     bottom: 10px;
-                    left:0;
-                    padding:0 5px;
+                    left: 0;
+                    padding: 0 5px;
                     background: none;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    & span{
-                        margin-right:8px;
+
+                    & span {
+                        margin-right: 8px;
                     }
+
                     & .review-amnt,
                     .quality {
                         color: $color-white;
                         font-size: $font-extra-sm;
+                        font-family:$fourth-font;
                     }
 
                     & .rating {
@@ -285,7 +341,7 @@
                         justify-content: center;
                         height: 30px;
                         width: 35px;
-                        outline:3px solid $color-gry-trsp;
+                        outline: 3px solid $color-gry-trsp;
                         @include radius-sm();
                     }
                 }
@@ -294,7 +350,14 @@
             & .contnt {
                 & .name {
                     & a {
-                        font-size: $font-heading;
+                        font-size: $font-secondary;
+                        color: $primary-color;
+                        font-weight: $font-bold;
+                        @include tnsn-first();
+
+                        &:hover {
+                            color: $color-btn;
+                        }
                     }
                 }
 
@@ -303,8 +366,10 @@
                     border-bottom: 1px dotted $color-gry-light;
 
                     & a {
-                        font-size: $font-extra-sm;
+                        font-size: $font-primary;
                         color: $color-gry;
+                        font-family: $fourth-font;
+                        // font-weight: $font-bold;
 
                         & span {
                             color: $primary-color;
@@ -314,8 +379,10 @@
                 }
 
                 & .para {
-                    font-size: $font-extra-sm;
+                    font-size: $font-primary;
                     color: $color-gry;
+                    font-family: $fourth-font;
+                    // font-weight: $font-bold;
                 }
 
                 & .facilities {
@@ -360,15 +427,15 @@
 
                 & .rent {
                     display: inline-block;
-                    background: $color-listing-sec;
-                    font-size: $font-primary;
-                    padding: 12px 15px;
-                    color: $color-gry;
+                    background: $color-btn;
+                    font-size: $font-extra-sm;
+                    padding: 10px 12px;
+                    color: $color-white;
                     @include radius-sm();
 
                     & span {
                         margin-left: 4px;
-                        color: $color-dark;
+                        color: $color-white;
                     }
                 }
 
@@ -379,8 +446,8 @@
 
                     & a {
                         margin-left: 5px;
-                        background-color: $color-listing-sec;
-                        color: $primary-color;
+                        background-color: $color-btn;
+                        color: $color-white;
                         width: 40px;
                         height: 40px;
                         display: flex;
@@ -388,6 +455,11 @@
                         justify-content: center;
                         @include radius-sm();
                         position: relative;
+                        @include tnsn-first();
+
+                        &:hover {
+                            background-color:$primary-color;
+                        }
 
                         & i {
                             @include tnsn-first();
