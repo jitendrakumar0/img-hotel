@@ -1,3 +1,32 @@
+$(function() {
+  
+    $('#aniimated-thumbnials').lightGallery({
+      thumbnail: true,
+    });
+  // Card's slider
+    var $carousel = $('.slider-for');
+  
+    $carousel
+      .slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        adaptiveHeight: true,
+        asNavFor: '.slider-nav'
+      });
+    $('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      variableWidth: true
+    });
+  
+  
+  });
 // STICKY HEADER
 
 window.onscroll = function () {
@@ -245,10 +274,10 @@ const decrementButton = document.querySelector("#decrement");
 const quantityInput = document.querySelector("#quantity");
 
 incrementButton.addEventListener("click", () => {
-  quantityInput.value = parseInt(quantityInput.value) + 1;
+    quantityInput.value = parseInt(quantityInput.value) + 1;
 });
 decrementButton.addEventListener("click", () => {
-  quantityInput.value = parseInt(quantityInput.value) - 1;
+    quantityInput.value = parseInt(quantityInput.value) - 1;
 });
 
 
@@ -257,10 +286,10 @@ const decrementButtons = document.querySelector("#decrement-1");
 const quantityInputs = document.querySelector("#quantity-1");
 
 incrementButtons.addEventListener("click", () => {
-  quantityInputs.value = parseInt(quantityInputs.value) + 1;
+    quantityInputs.value = parseInt(quantityInputs.value) + 1;
 });
 decrementButtons.addEventListener("click", () => {
-  quantityInputs.value = parseInt(quantityInputs.value) - 1;
+    quantityInputs.value = parseInt(quantityInputs.value) - 1;
 });
 
 
@@ -269,9 +298,8 @@ const decrementButtonss = document.querySelector("#decrement-2");
 const quantityInputss = document.querySelector("#quantity-2");
 
 incrementButtonss.addEventListener("click", () => {
-  quantityInputss.value = parseInt(quantityInputss.value) + 1;
+    quantityInputss.value = parseInt(quantityInputss.value) + 1;
 });
 decrementButtonss.addEventListener("click", () => {
-  quantityInputss.value = parseInt(quantityInputss.value) - 1;
+    quantityInputss.value = parseInt(quantityInputss.value) - 1;
 });
-

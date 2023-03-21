@@ -5,8 +5,12 @@
 
 
 #breadcrumb {
-    background-color: $color-white;
-    padding: 5px 0 10px 0;
+    background: url("../../images/breadrumb-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 5px 0 5px 0;
+    margin-top: -5px;
 
     & .breadcrumbs {
         & ol {
@@ -31,40 +35,47 @@
             }
         }
     }
-    & .selector{
-        & .custom-select{
-            width:200px;
+
+    & .selector {
+        & .custom-select {
+            width: 200px;
             margin-left: auto;
-            background-color:$color-btn !important;
+            background-color: $color-btn !important;
             @include radius-sm();
-            
+
         }
-        & .select-items div, .select-selected{
-            color:$color-white;
-            font-size:$font-extra-sm;
+
+        & .select-items div,
+        .select-selected {
+            color: $color-white;
+            font-size: $font-extra-sm;
         }
-        & .select-selected{
-            background:none;
-            margin-left:25px;
-            font-size:$font-extra-sm;
-            &::after{
-                position:absolute;
-                content:"\f0c9";
-                font-family:'FONTAWESOME';
-                top:11px;
+
+        & .select-selected {
+            background: none;
+            margin-left: 25px;
+            font-size: $font-extra-sm;
+
+            &::after {
+                position: absolute;
+                content: "\f0c9";
+                font-family: 'FONTAWESOME';
+                top: 11px;
                 left: 0;
-                display:block !important;
-                margin-left:18px;
+                display: block !important;
+                margin-left: 18px;
             }
         }
-        & .select-items{
-            background-color:$color-btn;
+
+        & .select-items {
+            background-color: $color-btn;
         }
-        & .srt-by{
-            color:$primary-color;
-            font-size:$font-primary;
-            margin-right:10px;
-            font-weight:$font-bold;
+
+        & .srt-by {
+            color: $primary-color;
+            font-size: $font-primary;
+            margin-right: 10px;
+            font-weight: $font-bold;
         }
     }
 }
@@ -145,7 +156,7 @@
                 }
 
                 .input-wrapper {
-                    outline:2px solid $color-gry;
+                    outline: 2px solid $color-gry;
                     @include radius-sm();
                     display: inline-block;
                     width: 100%;
@@ -329,7 +340,7 @@
                     .quality {
                         color: $color-white;
                         font-size: $font-extra-sm;
-                        font-family:$fourth-font;
+                        font-family: $fourth-font;
                     }
 
                     & .rating {
@@ -349,6 +360,8 @@
 
             & .contnt {
                 & .name {
+                    position: relative;
+
                     & a {
                         font-size: $font-secondary;
                         color: $primary-color;
@@ -358,6 +371,13 @@
                         &:hover {
                             color: $color-btn;
                         }
+                    }
+
+                    & img {
+                        position: absolute;
+                        width: 30px;
+                        right: 0;
+                        top: 0;
                     }
                 }
 
@@ -458,7 +478,7 @@
                         @include tnsn-first();
 
                         &:hover {
-                            background-color:$primary-color;
+                            background-color: $primary-color;
                         }
 
                         & i {
@@ -505,7 +525,7 @@
             }
 
             &:hover {
-                & img {
+                & .img-htl {
                     @include trnsform-scale();
                 }
             }
@@ -535,5 +555,594 @@
                 background: $color-btn-trsp;
             }
         }
+    }
+}
+
+// SEARCH HOTELS SECTION
+#search-hotels,#compare-accomo{
+    & .srch-htl-clmn {
+        margin-bottom: 30px;
+    }
+
+    & .hotel {
+        --space: 30px;
+        position: relative;
+        text-align: center;
+
+        & .image {
+            & img {
+                @include radius-md();
+            }
+        }
+
+        & .htl-content-1 {
+            background: $color-white;
+            padding: 15px 25px 10px 25px;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            width: calc(100% - (30px)*2) !important;
+            @include radius-md();
+            @include tnsn-first();
+
+            & .service-price {
+                & .price-title {
+                    font-size: $font-secondary;
+                    color: $color-gry;
+                    font-family: $fourth-font;
+                }
+
+                & .stars {
+                    & ul {
+                        & li {
+                            margin: 3px;
+
+                            & i {
+                                color: $color-rating;
+                                font-size: $font-primary;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .service-card_title {
+                & a {
+                    color: $color-dark;
+                    font-size: $font-heading;
+                }
+            }
+        }
+
+        & .htl-content-2 {
+            padding: 40px 30px;
+            background: $color-white;
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            width: calc(100% - (30px)*2) !important;
+            @include radius-md();
+            @include tnsn-first();
+            @include trnsfrm-scaleX0();
+
+            & .price-title {
+                font-size: $font-secondary;
+                color: $color-gry;
+                font-family: $fourth-font;
+            }
+
+            & .stars {
+                & ul {
+                    & li {
+                        margin: 3px;
+
+                        & i {
+                            color: $color-rating;
+                            font-size: $font-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .service-card_title {
+            margin-top: 10px;
+
+            & a {
+                color: $color-dark;
+                font-size: $font-heading;
+                @include tnsn-first();
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        & .service-card_text {
+            text-align: left;
+            font-size: 14px;
+            color: gray;
+            margin-top: 18px;
+            font-family: $fourth-font;
+        }
+
+        & .service-card-btn {
+            margin-top: 35px;
+
+            & .as-btn.style3 {
+                padding: 15px 20px;
+                background-color: $primary-color;
+                width: 135px;
+                color: $color-white;
+                font-size: $font-primary;
+                @include radius-sm();
+                position: relative;
+                z-index: 99;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: $color-btn;
+                    top: 0;
+                    left: -135px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    opacity: 0;
+                    @include tnsn-first();
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $color-btn;
+                    top: 0;
+                    right: -135px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    opacity: 0;
+                    @include tnsn-first();
+                }
+
+                &:hover::before {
+                    left: 0;
+                    opacity: 1;
+                }
+
+                &:hover::after {
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+
+            & .black-btn {
+                padding: 15px 20px;
+                background-color: $color-btn;
+                width: 135px;
+                margin-left: auto;
+                color: $color-white;
+                font-size: $font-primary;
+                @include radius-sm();
+                position: relative;
+                z-index: 99;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background: $primary-color;
+                    top: 0;
+                    left: -135px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    opacity: 0;
+                    @include tnsn-first();
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: $primary-color;
+                    top: 0;
+                    right: -135px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    opacity: 0;
+                    @include tnsn-first();
+                }
+
+                &:hover::before {
+                    left: 0;
+                    opacity: 1;
+                }
+
+                &:hover::after {
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:hover .htl-content-1 {
+            @include trnsfrm-scaleX0();
+        }
+
+        &:hover .htl-content-2 {
+            @include trnsfrm-scaleX1();
+        }
+    }
+
+}
+
+// DETAILS SECTION
+.item-slick.slick-slide.slick-current.slick-active {
+    outline: none !important;
+}
+
+.slider-for {
+    margin-bottom: 15px;
+}
+
+.slider-for img {
+    width: 100%;
+    min-height: 100%;
+}
+
+.slider-nav {
+    margin: auto;
+
+    & .item-slick {
+        max-width: 240px;
+        margin-right: 15px;
+        outline: none !important;
+        cursor: pointer;
+
+        & img {
+            max-width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    & .slick-arrow {
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        height: 100%;
+        border: none;
+        background: $primary-color;
+        padding: 0 15px;
+        @include tnsn-first();
+
+        &:hover {
+            background-color: $color-btn;
+        }
+    }
+
+    & .slick-prev {
+        left: 0;
+
+        &::before {
+            content: "\f053";
+            position: absolute;
+            font-family: 'FONTAWESOME';
+            top: 42%;
+            left: 10px;
+            color: $color-white;
+        }
+    }
+
+    & .slick-next {
+        right: 0;
+
+        &::before {
+            content: "\f054";
+            position: absolute;
+            font-family: 'FONTAWESOME';
+            top: 42%;
+            right: 10px;
+            color: $color-white;
+        }
+    }
+}
+
+#aniimated-thumbnials {
+    position: relative;
+
+    & a {
+        & img {}
+
+        & .img-txt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: $color-white;
+            background: $color-dark-tsnsp;
+            font-size: $font-extra-sm;
+            padding: 12px 10px;
+        }
+    }
+
+}
+
+#details-sec {
+    & .bk-now {
+        background:$color-listing-sec;
+        padding: 15px 25px;
+        @include radius-sm();
+        & .check-in,
+        .check-out {
+            & label {
+                font-size: $font-extra-sm;
+                color: $color-dark;
+                margin-bottom: 5px;
+                font-family: $fourth-font;
+                font-weight: $font-bold;
+            }
+
+            & .input-group {
+                & input {
+                    font-size: $font-extra-sm;
+                    padding: 10px 12px;
+                    background-color: $color-btn;
+                    color: $color-white;
+
+                    &::placeholder {
+                        color: $color-white;
+                    }
+                }
+
+                & .input-group-append {
+
+                    & .input-group-text {
+                        border: none !important;
+                        height: 100% !important;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                        background: $color-btn !important;
+                        margin: 0 !important;
+
+                        & i {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .input-pill {
+            & .rooms {
+                text-align: center;
+
+                & label {
+                    font-size: $font-extra-sm;
+                    color: $color-dark;
+                    margin-bottom: 5px;
+                    width: 100%;
+                    text-align: left;
+                    font-family: $fourth-font;
+                    font-weight: $font-bold;
+                }
+
+                .input-wrapper {
+                    @include radius-sm();
+                    display: inline-block;
+                    width: 100%;
+                    font-size: $font-extra-sm;
+
+                    & input {
+                        text-align: center;
+                        border-top-left-radius:2px;
+                        border-bottom-left-radius:2px;
+                    }
+                }
+
+                .input-wrapper * {
+                    border: none;
+                }
+
+                .input-wrapper button:first-child {
+                    width: 100%;
+                    font-size: $font-extra-sm;
+                    width: 50px;
+                    padding: 0 !important;
+                    color: $color-white;
+                    background: $color-btn;
+                    border-top-right-radius:2px;
+                }
+
+                .input-wrapper button:last-child {
+                    width: 100%;
+                    font-size: $font-extra-sm;
+                    width: 50px;
+                    padding: 0 !important;
+                    color: $color-white;
+                    background: $color-btn;
+                    border-bottom-right-radius:2px;
+                }
+            }
+        }
+        & .price{
+            padding:10px 0;
+            & .heading{
+                font-size:$font-heading;
+                margin-top: 10px;
+                font-weight:$font-bold;
+                margin-top:15px;
+            }
+            & .para{
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+                font-size:$font-primary;
+                color:$color-gry;
+                & span{
+                    font-size:$font-sm;
+                    font-weight:$font-bold;
+                    margin-right:5px;
+                    color:$color-dark;
+                }
+            }
+        }
+        & .srch-btn {
+            & .cmn-btn {
+                @include cmn-btn();
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                margin-top: 5px;
+                box-shadow: 0px 0px 5px $color-white;
+            }
+        }
+        & .recomended{
+            & .heading{
+                font-size:$font-heading;
+                margin-top: 10px;
+                font-weight:$font-bold;
+                margin-top:15px;
+            }
+            & .recmdtin-1{
+                & .image{
+                    max-width:100px;
+                }
+                & .name{
+                    & .htl-name{
+                        display:block;
+                        color:$color-dark;
+                        font-size:$font-secondary;
+                    }
+                    & .booknow{
+                        font-size:$font-heading;
+                        color:$primary-color;
+                        font-weight:$font-bold;
+                        &:hover{
+                            color:$color-btn;
+                        }
+                    }
+                }
+                & .htl-price{
+                    & .value{
+                        font-size:$font-secondary;
+                        display:block;
+                    }
+                    & .duratn{
+                        font-size:$font-secondary;
+                        display:block;
+                        font-weight:$font-bold;
+                        margin-top:4px;
+                    }
+                }
+            }
+        }
+    }
+    & .details-part{
+        & .tabs{
+            & .nav-pills .nav-link{
+                margin-bottom:10px;
+                padding:10px 0;
+                background-color:$color-btn;
+                color:$color-white;
+                font-size:$font-primary;
+            }
+            & .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+                background-color:$primary-color !important;
+            }
+            & .nav{
+                border-right:1px solid $color-gry-trsp;
+                padding-right: 40px;
+            }
+        }
+        & .tabs-content{
+            & #v-pills-overview,#v-pills-amenities{
+                & .heading{
+                    font-size:$font-secondary;
+                    color:$color-dark;
+                    text-transform:uppercase;
+                    word-spacing: 1px;
+                }
+                & .para{
+                    font-size:$font-extra-sm;
+                    color:$color-dark;
+                    word-spacing: 1px;
+                    line-height:26px;
+                }
+                & .spcl-rooms{
+                    & .menu{
+                        padding-left:18px;
+                        & .para{
+                            line-height:0px;
+                        }
+                    }
+                }
+            }
+            & #v-pills-package{
+                & .package-cntnt{
+                    border-bottom:1px solid $color-gry-trsp;
+                    & .text{
+                        padding-right:65px;
+                    & .heading{
+                       & a{
+                        color:$color-dark;
+                        font-size:$font-primary;
+                        font-weight:$font-bold;
+                        text-transform:uppercase;
+                        @include tnsn-first();
+                        &:hover{
+                            color:$color-btn;
+                        }
+                       }
+                    }
+                    & .para{
+                        color:$color-gry;
+                        font-size:$font-extra-sm;
+                        font-family:$fourth-font;
+                        line-height:26px;
+                    }
+                }
+                    & .price{
+                        & .amnt{
+                            font-size:$font-extra-sm;
+                            color:$color-gry;
+                            display: flex;
+                            align-items: baseline;
+                            margin-bottom:12px;
+                            & span{
+                                font-size:$font-secondary;
+                                color:$color-dark;
+                            }
+                        }
+                        & .bk-pkg{
+                            font-size:$font-extra-sm;
+                            color:$color-dark;
+                            border: 2px solid $color-dark;
+                            padding:4px 7px;
+                            @include tnsn-first();
+                            &:hover{
+                                background:$color-btn;
+                                color:$color-white !important;
+                                border-color:$color-btn;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// COMPARE ACCOMODATION 
+#compare-accomo{
+    & .heading-accomo{
+        font-size:$font-heading;
+        font-weight:$font-bold;
+        border-top: 1px solid $color-gry-trsp;
+        padding-top: 25px;
     }
 }

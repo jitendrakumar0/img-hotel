@@ -71,7 +71,7 @@ a {
     left: -210px;
     background-color: $color-btn;
     @include tnsn-first();
-    opacity:0;
+    opacity: 0;
   }
 
   &:after {
@@ -84,7 +84,7 @@ a {
     background-color: $color-btn;
     @include tnsn-first();
     z-index: 1;
-    opacity:0;
+    opacity: 0;
   }
 
   & span {
@@ -94,14 +94,15 @@ a {
 
   &:hover::before {
     left: 0 !important;
-    opacity:1;
+    opacity: 1;
   }
 
   &:hover::after {
     right: 0 !important;
-    opacity:1;
+    opacity: 1;
   }
 }
+
 // LOGO
 .navbar-brand {
   color: $color-white;
@@ -122,17 +123,19 @@ a {
   font-size: $font-extra-sm;
   padding: 10px 12px !important;
   @include radius-md();
-  &:after{
-    display:none;
+
+  &:after {
+    display: none;
   }
-  &::before{
+
+  &::before {
     position: absolute;
     content: "\f107";
-    font-family:'FONTAWESOME';
-    top:8px;
-    right:20px;
-    font-size:$font-secondary;
-    font-weight:$font-bold;
+    font-family: 'FONTAWESOME';
+    top: 8px;
+    right: 20px;
+    font-size: $font-secondary;
+    font-weight: $font-bold;
   }
 }
 
@@ -252,7 +255,8 @@ a {
       & .btn {
         font-size: $font-primary;
         color: $primary-color;
-        height:100%;
+        height: 100%;
+
         & img {
           max-width: 25px;
           margin-right: 5px;
@@ -297,8 +301,10 @@ a {
 }
 
 // MODAL SYLING
-#exampleModal,.modal-sm{
+#exampleModal,
+.modal-sm {
   background: $color-dark-tsnsp;
+
   & .modal-content {
     height: 450px;
     border: 8px solid $color-gry-trsp;
@@ -493,8 +499,9 @@ a {
       }
     }
   }
-  & .register-lnk{
-    font-size:$font-primary;
+
+  & .register-lnk {
+    font-size: $font-primary;
     padding: 0 10px;
   }
 }
@@ -504,7 +511,7 @@ a {
   background-color: $primary-color;
   padding: 10px 0;
 
- 
+
   & .nav-item {
     margin: 0 23px;
     position: relative;
@@ -592,18 +599,20 @@ a {
     border: none;
     font-size: $font-heading;
   }
-  & .lgn-snp-lnk{
-    background:none;
-    border:none;
-    color:$color-white;
+
+  & .lgn-snp-lnk {
+    background: none;
+    border: none;
+    color: $color-white;
     display: flex;
     align-items: center;
     justify-content: center;
-    width:100px;
+    width: 100px;
     padding: 5px 0;
     @include radius-md();
-    & img{
-      width:30px !important;
+
+    & img {
+      width: 30px !important;
     }
   }
 }
@@ -613,6 +622,7 @@ a {
 
   & .offcanvas-header {
     background-color: $primary-color;
+
     & .btn-close {
       background: none;
       margin-right: 0px;
@@ -789,16 +799,14 @@ a {
       & .heading-cntnt {
         color: $color-fourth;
         font-size: $font-big;
-        font-family: Satisfy;
-        font-weight: $font-bold;
+        font-family: $third-font;
         letter-spacing: 5px;
       }
 
       & .para-cntnt {
         color: $color-fourth;
         font-size: $font-big;
-        font-weight: $font-bold;
-        font-family: Satisfy;
+        font-family: $third-font;
         text-align: end;
         letter-spacing: 5px;
       }
@@ -880,75 +888,85 @@ a {
 }
 
 // OFFER SECTION
-.ofr-lg{
+.ofr-lg {
   background-color: $primary-color;
+
   & img {
     box-shadow: 0px 0px 8px $color-dark;
   }
 }
+
 // OFFER SECTION-SM
 #scan-ofr-sec {
   background-color: $primary-color;
   box-shadow: 0px 0px 8px $color-dark;
-  & .ofr-image{
-    position:relative;
-    & img{
+
+  & .ofr-image {
+    position: relative;
+
+    & img {
       @include radius-md();
       box-shadow: 0px 0px 8px $color-dark;
     }
-    & span{
-      font-size:$font-extra-sm;
-      color:$color-white;
-      background:$color-btn;
+
+    & span {
+      font-size: $font-extra-sm;
+      color: $color-white;
+      background: $color-btn;
       padding: 0 15px;
       position: absolute;
       top: 10px;
       left: 0;
     }
   }
-  & .ofr-detail{
-    color:$color-white;
-    font-size:$font-primary;
-    font-family:$fourth-font;
-    font-weight:$font-bold;
-    display:flex;
-    align-items:center;
+
+  & .ofr-detail {
+    color: $color-white;
+    font-size: $font-primary;
+    font-family: $fourth-font;
+    font-weight: $font-bold;
+    display: flex;
+    align-items: center;
   }
-  & .on-al{
-    color:$color-white;
-    font-size:$font-heading;
-    font-family:$third-font;
+
+  & .on-al {
+    color: $color-white;
+    font-size: $font-heading;
+    font-family: $third-font;
     letter-spacing: 5px;
     word-spacing: 5px;
-    font-weight:$font-bold;
+    font-weight: $font-bold;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  & .scan-now{
-    position:relative;
-    & .scan{
-      background:$color-white;
+
+  & .scan-now {
+    position: relative;
+
+    & .scan {
+      background: $color-white;
       font-size: 14px;
       width: 100%;
-      color:$primary-color;
+      color: $primary-color;
       height: 80px;
       display: flex;
-      font-weight:$font-bold;
+      font-weight: $font-bold;
       align-items: center;
       justify-content: center;
       @include radius-md();
-      position:relative;
+      position: relative;
       box-shadow: 0px 0px 8px $color-dark;
     }
-    & .scan-2{
-      background:$color-white;
+
+    & .scan-2 {
+      background: $color-white;
       font-size: 14px;
       width: 100%;
-      color:$primary-color;
+      color: $primary-color;
       height: 80px;
       display: flex;
-      font-weight:$font-bold;
+      font-weight: $font-bold;
       align-items: center;
       justify-content: center;
       @include radius-md();
@@ -958,13 +976,15 @@ a {
       box-shadow: 0px 0px 8px $color-dark;
     }
   }
-  & .qr-image{
-    & img{
+
+  & .qr-image {
+    & img {
       @include radius-md();
       box-shadow: 0px 0px 8px $color-dark;
     }
   }
 }
+
 // POPULAR HOTELS SECTION
 #pp-hotels {
   background-color: $primary-color;
@@ -1192,6 +1212,7 @@ a {
   position: relative;
   padding: 35px 0 35px 0;
   box-shadow: 0px 0px 8px $color-dark;
+
   &::before {
     content: "";
     position: absolute;
@@ -1269,6 +1290,7 @@ a {
 
   & .footer-links {
     @include tnsn-first();
+
     &:hover {
       @include trnsform-trslatx();
     }
