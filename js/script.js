@@ -1,32 +1,32 @@
-$(function() {
-  
+$(function () {
+
     $('#aniimated-thumbnials').lightGallery({
-      thumbnail: true,
+        thumbnail: true,
     });
-  // Card's slider
+    // Card's slider
     var $carousel = $('.slider-for');
-  
+
     $carousel
-      .slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        adaptiveHeight: true,
-        asNavFor: '.slider-nav'
-      });
+        .slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            adaptiveHeight: true,
+            asNavFor: '.slider-nav'
+        });
     $('.slider-nav').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for',
-      dots: false,
-      centerMode: false,
-      focusOnSelect: true,
-      variableWidth: true
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        variableWidth: true
     });
-  
-  
-  });
+
+
+});
 // STICKY HEADER
 
 window.onscroll = function () {
@@ -302,4 +302,19 @@ incrementButtonss.addEventListener("click", () => {
 });
 decrementButtonss.addEventListener("click", () => {
     quantityInputss.value = parseInt(quantityInputss.value) - 1;
+});
+
+
+// INPUT FOCUS EFFECT
+
+$(window).load(function () {
+    $(".col-3 input").val("");
+
+    $(".input-effect input").focusout(function () {
+        if ($(this).val() != "") {
+            $(this).addClass("has-content");
+        } else {
+            $(this).removeClass("has-content");
+        }
+    })
 });

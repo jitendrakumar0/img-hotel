@@ -306,9 +306,9 @@ a {
   background: $color-dark-tsnsp;
 
   & .modal-content {
-    height: 450px;
+    height: 520px;
     border: 8px solid $color-gry-trsp;
-    top: 60px !important;
+    top: 30px !important;
 
     & #pills-tab {
       & .nav-item {
@@ -372,13 +372,14 @@ a {
           }
 
           & input {
-            // border-top:1px solid $color-gry-light !important;
-            // border-right:1px solid $color-gry-light !important;
             border-bottom: 2px solid $color-gry-trsp !important;
+            // border-top: 2px solid $color-gry-trsp !important;
+            // border-right: 2px solid $color-gry-trsp !important;
             border-left: 5px solid $color-btn !important;
             padding: 10px 10px;
             @include radius-md();
             margin-top: 5px;
+            font-size: $font-extra-sm;
           }
         }
 
@@ -392,7 +393,8 @@ a {
           }
 
           & input {
-            border: 1px solid $primary-color !important
+            border: 1px solid $primary-color !important;
+            margin-top: 0;
           }
 
           & .pass-rcvr {
@@ -426,6 +428,66 @@ a {
 
           &::before {
             left: -320px;
+          }
+        }
+
+        & .lgn-optns {
+          & .heading {
+            font-size: $font-primary;
+            display: inline-block;
+            position: relative;
+
+            &:before {
+              content: "";
+              position: absolute;
+              background-color: $color-btn;
+              top: 8px;
+              left: -90px;
+              width: 80px;
+              height: 1px;
+            }
+
+            &:after {
+              content: "";
+              position: absolute;
+              background-color: $color-btn;
+              top: 8px;
+              right: -90px;
+              width: 80px;
+              height: 1px;
+            }
+          }
+
+          & .optns {
+            & .ggle {
+              & .link {
+                background: $primary-color;
+                color: $color-white;
+                font-size: $font-extra-sm;
+                padding: 10px 15px;
+                margin: 5px;
+                @include radius-sm();
+
+                & i {
+                  font-size: $font-primary;
+                  margin-right: 2px;
+                  border-right: 1px solid $color-white;
+                  padding-right: 6px;
+                }
+              }
+            }
+
+            & .facebook {
+              & .link {
+                background: #4267B2;
+              }
+            }
+
+            & .twitter {
+              & .link {
+                background: $color-btn;
+              }
+            }
           }
         }
       }
@@ -736,17 +798,23 @@ a {
       visibility: hidden;
 
       & span::before {
-        content: "";
+        content: "\f104";
         position: absolute;
         font-family: FONTAWESOME;
-        font-size: 40px;
+        font-size: $font-heading;
         top: -30px;
         left: 30px;
         visibility: visible;
-        padding: 0px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
         border-radius: 52px;
         visibility: visible;
         color: $color-white;
+        background-color: $primary-color-trsp;
+       
       }
     }
 
@@ -760,14 +828,20 @@ a {
         content: "\f105";
         position: absolute;
         font-family: FONTAWESOME;
-        font-size: 40px;
+        font-size: $font-heading;
         top: -30px;
         right: 30px;
         visibility: visible;
-        padding: 0px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
         border-radius: 52px;
         visibility: visible;
         color: $color-white;
+        background-color: $primary-color-trsp;
+        @include tnsn-first();
       }
     }
   }
