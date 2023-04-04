@@ -49,7 +49,7 @@ $(document).ready(function () {
         items: 1,
         loop: true,
         // autoplay: true,
-        margin: 20,
+        // margin: 20,
         responsive: {
             0: {
                 items: 1,
@@ -318,3 +318,6 @@ $(window).load(function () {
         }
     })
 });
+
+
+// DARKMODE

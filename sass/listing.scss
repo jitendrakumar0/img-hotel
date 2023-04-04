@@ -559,7 +559,8 @@
 }
 
 // SEARCH HOTELS SECTION
-#search-hotels,#compare-accomo{
+#search-hotels,
+#compare-accomo {
     & .srch-htl-clmn {
         margin-bottom: 30px;
     }
@@ -873,9 +874,10 @@
 
 #details-sec {
     & .bk-now {
-        background:$color-listing-sec;
+        background: $color-listing-sec;
         padding: 15px 25px;
         @include radius-sm();
+
         & .check-in,
         .check-out {
             & label {
@@ -938,8 +940,8 @@
 
                     & input {
                         text-align: center;
-                        border-top-left-radius:2px;
-                        border-bottom-left-radius:2px;
+                        border-top-left-radius: 2px;
+                        border-bottom-left-radius: 2px;
                     }
                 }
 
@@ -954,7 +956,7 @@
                     padding: 0 !important;
                     color: $color-white;
                     background: $color-btn;
-                    border-top-right-radius:2px;
+                    border-top-right-radius: 2px;
                 }
 
                 .input-wrapper button:last-child {
@@ -964,32 +966,37 @@
                     padding: 0 !important;
                     color: $color-white;
                     background: $color-btn;
-                    border-bottom-right-radius:2px;
+                    border-bottom-right-radius: 2px;
                 }
             }
         }
-        & .price{
-            padding:10px 0;
-            & .heading{
-                font-size:$font-heading;
+
+        & .price {
+            padding: 10px 0;
+
+            & .heading {
+                font-size: $font-heading;
                 margin-top: 10px;
-                font-weight:$font-bold;
-                margin-top:15px;
+                font-weight: $font-bold;
+                margin-top: 15px;
             }
-            & .para{
+
+            & .para {
                 display: flex;
                 align-items: baseline;
                 justify-content: center;
-                font-size:$font-primary;
-                color:$color-gry;
-                & span{
-                    font-size:$font-sm;
-                    font-weight:$font-bold;
-                    margin-right:5px;
-                    color:$color-dark;
+                font-size: $font-primary;
+                color: $color-gry;
+
+                & span {
+                    font-size: $font-sm;
+                    font-weight: $font-bold;
+                    margin-right: 5px;
+                    color: $color-dark;
                 }
             }
         }
+
         & .srch-btn {
             & .cmn-btn {
                 @include cmn-btn();
@@ -1002,133 +1009,159 @@
                 box-shadow: 0px 0px 5px $color-white;
             }
         }
-        & .recomended{
-            & .heading{
-                font-size:$font-heading;
+
+        & .recomended {
+            & .heading {
+                font-size: $font-heading;
                 margin-top: 10px;
-                font-weight:$font-bold;
-                margin-top:15px;
+                font-weight: $font-bold;
+                margin-top: 15px;
             }
-            & .recmdtin-1{
-                & .image{
-                    max-width:100px;
+
+            & .recmdtin-1 {
+                & .image {
+                    max-width: 100px;
                 }
-                & .name{
-                    & .htl-name{
-                        display:block;
-                        color:$color-dark;
-                        font-size:$font-secondary;
+
+                & .name {
+                    & .htl-name {
+                        display: block;
+                        color: $color-dark;
+                        font-size: $font-secondary;
                     }
-                    & .booknow{
-                        font-size:$font-heading;
-                        color:$primary-color;
-                        font-weight:$font-bold;
-                        &:hover{
-                            color:$color-btn;
+
+                    & .booknow {
+                        font-size: $font-heading;
+                        color: $primary-color;
+                        font-weight: $font-bold;
+
+                        &:hover {
+                            color: $color-btn;
                         }
                     }
                 }
-                & .htl-price{
-                    & .value{
-                        font-size:$font-secondary;
-                        display:block;
+
+                & .htl-price {
+                    & .value {
+                        font-size: $font-secondary;
+                        display: block;
                     }
-                    & .duratn{
-                        font-size:$font-secondary;
-                        display:block;
-                        font-weight:$font-bold;
-                        margin-top:4px;
+
+                    & .duratn {
+                        font-size: $font-secondary;
+                        display: block;
+                        font-weight: $font-bold;
+                        margin-top: 4px;
                     }
                 }
             }
         }
     }
-    & .details-part{
-        & .tabs{
-            & .nav-pills .nav-link{
-                margin-bottom:10px;
-                padding:10px 0;
-                background-color:$color-btn;
-                color:$color-white;
-                font-size:$font-primary;
+
+    & .details-part {
+        & .tabs {
+            & .nav-pills .nav-link {
+                margin-bottom: 10px;
+                padding: 10px 0;
+                background-color: $color-btn;
+                color: $color-white;
+                font-size: $font-primary;
             }
-            & .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-                background-color:$primary-color !important;
+
+            & .nav-pills .nav-link.active,
+            .nav-pills .show>.nav-link {
+                background-color: $primary-color !important;
             }
-            & .nav{
-                border-right:1px solid $color-gry-trsp;
+
+            & .nav {
+                border-right: 1px solid $color-gry-trsp;
                 padding-right: 40px;
             }
         }
-        & .tabs-content{
-            & #v-pills-overview,#v-pills-amenities{
-                & .heading{
-                    font-size:$font-secondary;
-                    color:$color-dark;
-                    text-transform:uppercase;
+
+        & .tabs-content {
+
+            & #v-pills-overview,
+            #v-pills-amenities {
+                & .heading {
+                    font-size: $font-secondary;
+                    color: $color-dark;
+                    text-transform: uppercase;
                     word-spacing: 1px;
                 }
-                & .para{
-                    font-size:$font-extra-sm;
-                    color:$color-dark;
+
+                & .para {
+                    font-size: $font-extra-sm;
+                    color: $color-dark;
                     word-spacing: 1px;
-                    line-height:26px;
+                    line-height: 26px;
                 }
-                & .spcl-rooms{
-                    & .menu{
-                        padding-left:18px;
-                        & .para{
-                            line-height:0px;
+
+                & .spcl-rooms {
+                    & .menu {
+                        padding-left: 18px;
+
+                        & .para {
+                            line-height: 0px;
                         }
                     }
                 }
             }
-            & #v-pills-package{
-                & .package-cntnt{
-                    border-bottom:1px solid $color-gry-trsp;
-                    & .text{
-                        padding-right:65px;
-                    & .heading{
-                       & a{
-                        color:$color-dark;
-                        font-size:$font-primary;
-                        font-weight:$font-bold;
-                        text-transform:uppercase;
-                        @include tnsn-first();
-                        &:hover{
-                            color:$color-btn;
-                        }
-                       }
-                    }
-                    & .para{
-                        color:$color-gry;
-                        font-size:$font-extra-sm;
-                        font-family:$fourth-font;
-                        line-height:26px;
-                    }
-                }
-                    & .price{
-                        & .amnt{
-                            font-size:$font-extra-sm;
-                            color:$color-gry;
-                            display: flex;
-                            align-items: baseline;
-                            margin-bottom:12px;
-                            & span{
-                                font-size:$font-secondary;
-                                color:$color-dark;
+
+            & #v-pills-package {
+                & .package-cntnt {
+                    border-bottom: 1px solid $color-gry-trsp;
+
+                    & .text {
+                        padding-right: 65px;
+
+                        & .heading {
+                            & a {
+                                color: $color-dark;
+                                font-size: $font-primary;
+                                font-weight: $font-bold;
+                                text-transform: uppercase;
+                                @include tnsn-first();
+
+                                &:hover {
+                                    color: $color-btn;
+                                }
                             }
                         }
-                        & .bk-pkg{
-                            font-size:$font-extra-sm;
-                            color:$color-dark;
+
+                        & .para {
+                            color: $color-gry;
+                            font-size: $font-extra-sm;
+                            font-family: $fourth-font;
+                            line-height: 26px;
+                        }
+                    }
+
+                    & .price {
+                        & .amnt {
+                            font-size: $font-extra-sm;
+                            color: $color-gry;
+                            display: flex;
+                            align-items: baseline;
+                            margin-bottom: 12px;
+
+                            & span {
+                                font-size: $font-secondary;
+                                color: $color-dark;
+                            }
+                        }
+
+                        & .bk-pkg {
+                            font-size: $font-extra-sm;
+                            color: $color-dark;
                             border: 2px solid $color-dark;
-                            padding:4px 7px;
+                            padding: 4px 7px;
                             @include tnsn-first();
-                            &:hover{
-                                background:$color-btn;
-                                color:$color-white !important;
-                                border-color:$color-btn;
+
+                            &:hover {
+                                background: $color-btn;
+                                color: $color-white !important;
+                                border-color: $color-btn;
                             }
                         }
                     }
@@ -1137,11 +1170,12 @@
         }
     }
 }
+
 // COMPARE ACCOMODATION 
-#compare-accomo{
-    & .heading-accomo{
-        font-size:$font-heading;
-        font-weight:$font-bold;
+#compare-accomo {
+    & .heading-accomo {
+        font-size: $font-heading;
+        font-weight: $font-bold;
         border-top: 1px solid $color-gry-trsp;
         padding-top: 25px;
     }

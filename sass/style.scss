@@ -61,7 +61,7 @@ a {
   position: relative;
   overflow: hidden;
   @include tnsn-first();
-
+  outline:2px solid $color-white;
   &:before {
     content: "";
     position: absolute;
@@ -814,7 +814,7 @@ a {
         visibility: visible;
         color: $color-white;
         background-color: $primary-color-trsp;
-       
+
       }
     }
 
@@ -1063,12 +1063,12 @@ a {
 #pp-hotels {
   background-color: $primary-color;
   position: relative;
-  padding: 35px 0 35px 0;
+  padding: 45px 0 45px 0;
   box-shadow: 0px 0px 8px $color-dark;
 
   & .content {
-    padding: 40px 20px;
-    box-shadow: 0px 0px 8px $color-dark;
+    padding: 10px 0;
+    // box-shadow: 0px 0px 8px $color-dark;
     @include radius-big();
 
     & .heading {
@@ -1080,6 +1080,12 @@ a {
     & .para {
       color: $color-white;
       font-size: $font-extra-sm;
+      line-height: 26px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
 
     & .cmn-btn {
@@ -1195,45 +1201,56 @@ a {
 #htls-in-city {
   & .image-city {
     overflow: hidden;
-    @include radius-big();
-    position: relative;
+    @include radius-md();
     height: 230px;
+    padding: 5px;
+    border: 2px solid $color-gry-light;
 
-    & img {
-      @include tnsn-first();
-      filter: brightness(0.5);
+    & .image {
+      overflow: hidden;
 
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
+      & img {
+        @include tnsn-first();
+        filter: brightness(0.5);
 
-    & .htl-cnt {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      color: $color-fourth;
-      background-color: $primary-color;
-      padding: 5px 10px;
-      font-size: $font-extra-sm;
-      @include radius-sm();
-    }
-
-    & .content {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: 0 20px;
-
-      & .cty {
-        color: $color-white;
-        font-size: $font-primary;
-        font-weight: $font-bold;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
-      & .para {
-        color: $color-white;
+
+      & .htl-cnt {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: $color-fourth;
+        background-color: $primary-color;
+        padding: 5px 10px;
         font-size: $font-extra-sm;
+        @include radius-sm();
+      }
+
+      & .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 20px;
+
+        & .cty {
+          color: $color-white;
+          font-size: $font-secondary;
+          font-weight: $font-bold;
+          @include tnsn-first();
+
+          &:hover {
+            color: $color-btn;
+          }
+        }
+
+        & .para {
+          color: $color-white;
+          font-size: $font-extra-sm;
+        }
       }
     }
   }
@@ -1241,13 +1258,13 @@ a {
 
 // COUNTER SECTION
 #counter-sec {
-  padding: 30px 0;
+  padding: 45px 0;
   background-color: $primary-color;
   box-shadow: 0px 0px 8px $color-dark;
 
   & .amnt {
     padding: 18px 15px;
-    @include radius-big();
+    @include radius-md();
     height: 150px;
     @include tnsn-first();
     box-shadow: 0px 0px 8px $color-dark;
@@ -1284,7 +1301,7 @@ a {
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: 35px 0 35px 0;
+  padding: 45px 0 45px 0;
   box-shadow: 0px 0px 8px $color-dark;
 
   &::before {
@@ -1314,6 +1331,7 @@ a {
     @include cmn-btn();
     padding: 10px 20px;
     border-radius: 5px;
+   
     display: inline-block;
     margin-top: 5px;
     box-shadow: 0px 0px 5px $color-white;
@@ -1388,4 +1406,38 @@ a {
       }
     }
   }
+}
+
+/* DARKMODE STYLING */
+.darkmode-toggle {
+  background:$color-btn !important;
+  z-index: 999;
+  position: relative;
+  width:3rem !important;
+  height:3rem !important;
+  right: 10px !important;
+  bottom: 30px !important
+}
+
+.darkmode-toggle::before {
+  content: "\f0eb";
+  font-family: FONTAWESOME;
+  position: absolute;
+  color:$color-white;
+  font-size:$font-heading;
+}
+
+.darkmode-toggle--white {
+  background:$color-dark !important;
+}
+
+.darkmode-layer--button {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  right: 10px !important;
+  bottom: 30px !important
+}
+.darkmode-layer--expanded{
+  // background-color:#000 !important;
 }
