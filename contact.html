@@ -529,16 +529,16 @@
                     <nav aria-label="breadcrumb" class="h-100">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="" class="">Home</a>
+                                <a href="index.html" class="">Home</a>
                             </li>
                             <span class="devider"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="" class="">Listings</a>
+                                <a href="contact.html" class="">Contact Us</a>
                             </li>
                         </ol>
                     </nav>
                 </div>
-                <div class="col-6 selector">
+                <div class="col-6 selector d-none">
                     <div class="ms-auto d-flex align-items-center justify-content-center float-end">
                         <span class="srt-by">SORT RESULTS BY :</span>
                         <div class="custom-select">
@@ -555,430 +555,105 @@
             </div>
         </div>
     </div>
-
-    <div class="container-fluid" id="search-hotels">
-        <div class="container pt-5 pb-3">
+    <!-- CONTACT SECTION -->
+    <div class="container-fluid" id="contact-section">
+        <div class="container pt-5 pb-5">
             <div class="row">
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl1.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
+                <div class="col-xl-8 col-lg-8 form-sec">
+                    <div class="form-cntner h-100 w-100">
+                        <h4 class="heading">Contact Form</h4>
+                        <p class="para">Fill out the form below, we will get back you soon.</p>
+                        <div class="w-100 mt-3 d-flex">
+                            <div class="inpt-cntner frst-name w-50 pe-3">
+                                <label for="firstname" class="form-label">First Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="firstname">
                             </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
+                            <div class="inpt-cntner lst-name ms-auto w-50 ps-3">
+                                <label for="lasttname" class="form-label">Last Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="lasttname">
                             </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
+                        </div>
+                        <div class="w-100 mt-3 d-flex">
+                            <div class="inpt-cntner ph-nmbr w-50 pe-3">
+                                <label for="number" class="form-label">Phone Number <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" class="form-control" id="number">
+                            </div>
+                            <div class="inpt-cntner email ms-auto w-50 ps-3">
+                                <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="w-100 mt-3 d-flex">
+                            <div class="inpt-cntner sbjct w-50 pe-3">
+                                <label for="subject" class="form-label">Subject <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="subject">
+                            </div>
+                            <div class="inpt-cntner yr-cmpny ms-auto w-50 ps-3">
+                                <label for="company" class="form-label">Your Company <span
+                                        class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="company">
+                            </div>
+                        </div>
+                        <div class="w-100 mt-3 d-flex">
+                            <div class="inpt-cntner msg w-100">
+                                <label for="message">Write Your Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control mt-1" id="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="w-100 mt-4">
+                            <a href="#" class="cmn-btn"><span>Submit Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 map-sec">
+                    <div class="map-cntner w-100 h-100">
+                        <h4 class="heading">Visit Our Location</h4>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur.</p>
+                        <div class="mt-4 w-100">
+                            <h4 class="heading-msg">Message Us</h4>
+                            <p class="para"><a href="#" class="mail">info@exampal.com</a></p>
+                            <p class="para"><a href="#" class="mail">+91 9848 83 3938</a></p>
+                        </div>
+                        <div class="mt-4 w-100">
+                            <h4 class="heading-msg">Follow Us</h4>
+                            <div class="mediums w-100 d-flex">
+                                <a href="#" class="links">
+                                    <i class="fa fa-facebook text-white" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="links">
+                                    <i class="fa fa-twitter text-white" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="links">
+                                    <i class="fa fa-linkedin text-white" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="links">
+                                    <i class="fa fa-instagram text-white" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="links">
+                                    <i class="fa fa-pinterest-p text-white" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="links">
+                                    <i class="fa fa-youtube-play text-white" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="map w-100 mt-4">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.64332144568!2d72.74109713631994!3d19.082522324824836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1680676948217!5m2!1sen!2sin"
+                                    width="600" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade" class="w-100" width="600" height="250"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl2.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl3.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl4.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl5.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl6.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl7.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl8.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 srch-htl-clmn">
-                    <div class="hotel">
-                        <div class="image">
-                            <img src="images/srch-htl9.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="htl-content-1">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a>
-                            </h3>
-                        </div>
-                        <div class="htl-content-2">
-                            <div class="service-price d-flex align-items-center">
-                                <span class="price-title">PRICE $120.00 NIGHT</span>
-                                <div class="stars ms-auto">
-                                    <ul>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <h3 class="service-card_title text-start"><a href="service-details.html">Luxury Suite
-                                    Room</a></h3>
-                            <p class="service-card_text">Authoritatively scale long-term high impact products without
-                                cross-unit partnerships. Interactively reinvent real-time e-markets through.</p>
-                            <div class="service-card-btn d-flex">
-                                <a href="detail.html" class=" as-btn style3 mr-10 shadow-none">Details</a>
-                                <a href="service-details.html" class="as-btn black-btn shadow-none">Book now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
-
-
 
     <!-- FOOTER SECTION -->
     <div class="container-fluid footer-top">

@@ -1267,7 +1267,8 @@ a {
     @include radius-md();
     height: 150px;
     @include tnsn-first();
-    box-shadow: 0px 0px 8px $color-dark;
+    border:2px solid $color-white;
+    // box-shadow: 0px 0px 8px $color-dark;
 
     &:hover {
       box-shadow: 0px 0px 8px $color-white;

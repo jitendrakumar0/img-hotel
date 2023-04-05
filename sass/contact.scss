@@ -1,0 +1,102 @@
+@import "variable";
+@import "mixin";
+@import "responsive";
+
+
+#contact-section{
+    & .form-sec{
+        & .form-cntner{
+            & .heading{
+                font-size:$font-heading;
+                font-weight:$font-bold;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+                text-transform: uppercase;
+                color:$primary-color;
+            }
+            & .para{
+                font-size:$font-extra-sm;
+                font-family:$fourth-font;
+                letter-spacing:0.5px;
+                color:$color-gry;
+            }
+            & .inpt-cntner{
+                & label{
+                    font-size:$font-primary;
+                }
+                & input,textarea{
+                    border:1px solid $color-btn !important;
+                    padding: 10px 5px;
+                    font-size:$font-primary;
+                }
+            }
+            & .cmn-btn{
+                @include cmn-btn();
+                padding: 10px 20px;
+                @include radius-sm();
+                display: inline-block;
+                text-align: center;
+                margin-top: 5px;
+                box-shadow: 0px 0px 5px $color-white;
+            }
+        }
+    }
+    & .map-sec{
+        & .map-cntner{
+            & .heading{
+                font-size:$font-secondary;
+                font-weight:$font-bold;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+                color:$primary-color;
+                // text-transform: uppercase;
+            }
+            & .para{
+                font-size:$font-extra-sm;
+                font-family:$fourth-font;
+                letter-spacing:0.5px;
+                color:$color-gry;
+            }
+            & .heading-msg{
+                font-size:$font-secondary;
+                font-weight:$font-bold;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+                margin-bottom: 15px;
+                color:$primary-color;
+            }
+            & .para{
+                margin-bottom: 5px;
+                & .mail{
+                font-size:$font-extra-sm;
+                font-family:$fourth-font;
+                letter-spacing:0.5px;
+                color:$color-gry;
+                &:hover{
+                    color:$color-btn;
+                }
+                }
+            }
+            & .mediums{
+                & .links{
+                    margin: 0 10px 0 0;
+                    background:$primary-color;
+                    width: 40px;
+                    height:40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include tnsn-first();
+                    @include radius-sm();
+                    & i{
+                        font-size:$font-extra-sm;
+                    }
+                    &:hover{
+                        background:$color-btn;
+                        @include radius-complete();
+                    }
+                }
+            }
+        }
+    }
+}
