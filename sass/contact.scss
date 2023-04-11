@@ -3,34 +3,39 @@
 @import "responsive";
 
 
-#contact-section{
-    & .form-sec{
-        & .form-cntner{
-            & .heading{
-                font-size:$font-heading;
-                font-weight:$font-bold;
+#contact-section {
+    & .form-sec {
+        & .form-cntner {
+            & .heading {
+                font-size: $font-heading;
+                font-weight: $font-bold;
                 letter-spacing: 1px;
                 word-spacing: 1px;
                 text-transform: uppercase;
-                color:$primary-color;
+                color: $primary-color;
             }
-            & .para{
-                font-size:$font-extra-sm;
-                font-family:$fourth-font;
-                letter-spacing:0.5px;
-                color:$color-gry;
+
+            & .para {
+                font-size: $font-extra-sm;
+                font-family: $fourth-font;
+                letter-spacing: 0.5px;
+                color: $color-gry;
             }
-            & .inpt-cntner{
-                & label{
-                    font-size:$font-primary;
+
+            & .inpt-cntner {
+                & label {
+                    font-size: $font-primary;
                 }
-                & input,textarea{
-                    border:1px solid $color-btn !important;
+
+                & input,
+                textarea {
+                    border: 1px solid $color-btn !important;
                     padding: 10px 5px;
-                    font-size:$font-primary;
+                    font-size: $font-primary;
                 }
             }
-            & .cmn-btn{
+
+            & .cmn-btn {
                 @include cmn-btn();
                 padding: 10px 20px;
                 @include radius-sm();
@@ -41,58 +46,67 @@
             }
         }
     }
-    & .map-sec{
-        & .map-cntner{
-            & .heading{
-                font-size:$font-secondary;
-                font-weight:$font-bold;
+
+    & .map-sec {
+        & .map-cntner {
+            & .heading {
+                font-size: $font-secondary;
+                font-weight: $font-bold;
                 letter-spacing: 1px;
                 word-spacing: 1px;
-                color:$primary-color;
+                color: $primary-color;
                 // text-transform: uppercase;
             }
-            & .para{
-                font-size:$font-extra-sm;
-                font-family:$fourth-font;
-                letter-spacing:0.5px;
-                color:$color-gry;
+
+            & .para {
+                font-size: $font-extra-sm;
+                font-family: $fourth-font;
+                letter-spacing: 0.5px;
+                color: $color-gry;
             }
-            & .heading-msg{
-                font-size:$font-secondary;
-                font-weight:$font-bold;
+
+            & .heading-msg {
+                font-size: $font-secondary;
+                font-weight: $font-bold;
                 letter-spacing: 1px;
                 word-spacing: 1px;
                 margin-bottom: 15px;
-                color:$primary-color;
+                color: $primary-color;
             }
-            & .para{
+
+            & .para {
                 margin-bottom: 5px;
-                & .mail{
-                font-size:$font-extra-sm;
-                font-family:$fourth-font;
-                letter-spacing:0.5px;
-                color:$color-gry;
-                &:hover{
-                    color:$color-btn;
-                }
+
+                & .mail {
+                    font-size: $font-extra-sm;
+                    font-family: $fourth-font;
+                    letter-spacing: 0.5px;
+                    color: $color-gry;
+
+                    &:hover {
+                        color: $color-btn;
+                    }
                 }
             }
-            & .mediums{
-                & .links{
+
+            & .mediums {
+                & .links {
                     margin: 0 10px 0 0;
-                    background:$primary-color;
+                    background: $primary-color;
                     width: 40px;
-                    height:40px;
+                    height: 40px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     @include tnsn-first();
                     @include radius-sm();
-                    & i{
-                        font-size:$font-extra-sm;
+
+                    & i {
+                        font-size: $font-extra-sm;
                     }
-                    &:hover{
-                        background:$color-btn;
+
+                    &:hover {
+                        background: $color-btn;
                         @include radius-complete();
                     }
                 }
